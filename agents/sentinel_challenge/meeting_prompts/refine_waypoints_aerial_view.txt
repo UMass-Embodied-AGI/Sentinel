@@ -1,0 +1,84 @@
+$TaskDescription$
+
+You have just noticed active sentinels on your route. The original path may no longer be safe. Your task is to generate a new sequence of waypoints that safely lead to the destination while avoiding dangerous zones whenever possible. You can look at the aerial view image of the entire scene to help this.
+
+---
+
+### Input
+
+**Map Legend:**
+- red : Dangerous but transitable zone. There might be sentinels.
+- white: Transitable zone. 
+- black: Obstacles. Non-transitable zone.
+The rest is also considered transitable zone:
+- green: Your current position.
+- purple: The Target Destination.
+- blue: Reference route — the original path that has become unsafe.
+
+The map is shown in the attached image.
+
+You also have your numeric position for reference:
+$SelfPose$
+
+And the coordinate of the destination:
+$DestinationPose$
+
+And all known sentinel poses:
+$KnownSentinelPoses$
+
+Current reference route intersects the danger zone centered:
+$Danger$
+
+---
+
+### Guidelines
+
+Generate a **new safe route** from your current position to the target destination:
+The route should be represented by a series of sparse waypoints
+The route should not pass any dangerous zones unless necessary. You shouldn't get closer to any sentinel than 20m
+The route should always starts from your current position and ends at the destination.
+The waypoints should fulfill the following requirement:
+- The waypoints should be located in transitable zones.
+- The waypoints should not be located in dangerous zones, unless necessary.
+- The waypoints should guarantee connectivity. One can easily find its way by following the waypoints in order, with the possibility of lost its way minimized.
+- The waypoints should not be too dense. Try not place multiple waypoints along one street where there are no crossroads.
+
+---
+
+### Output Format
+
+Output a **JSON object** listing the route's waypoints (each in `[x, y]` format), forming a route from 'A' to 'T', including 'T'.
+
+No explanations or comments — only the map and the JSON object.
+
+Example Input:
+
+You also have your numeric position for reference:
+[15.4, 18.5]
+
+And the coordinate of the destination:
+[48.6, -63.5]
+
+And all known sentinel poses:
+[
+    [50, -100]
+]
+
+Current reference route intersects the danger zone centered:
+[50, -100]
+
+(and the aerial view image).
+
+Example output:
+
+```json
+[
+    [30.0, 33.0],
+    [57.6, 14.5],
+    [66.3, -4.9],
+    [53.9, -25.7],
+    [48.6, -63.5]
+]
+```
+
+Now generate your output.

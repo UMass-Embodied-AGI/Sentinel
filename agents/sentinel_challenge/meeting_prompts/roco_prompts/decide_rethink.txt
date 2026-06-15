@@ -1,0 +1,66 @@
+$TaskDescription$
+
+Now the agent is currently en route to the agreed meeting location. However, due to unexpected events (traffic, obstacles, etc.), the agent’s estimated time to arrival (ETA) can be no longer improve — or may even be increasing.
+
+Your task: Determine whether it’s time to **initiate a new group discussion** to consider changing the meeting location. Also consider what you are going to say when initiate a new group discussion.
+
+—
+
+**Input:**
+
+- Current Time: $CurrentTime$
+- Agent’s Name: $SelfName$
+- Self's Current Meeting Place: $CurrentPlace$
+- Self's Current ETA: 
+$CurrentETA$
+
+- Self's Historical ETAs (last 5–10 minutes):
+$HistoricalETAs$
+
+Note that the team only share the conversation history, instead of all infos.
+
+—
+
+**Output Format:**
+
+Return a JSON object:
+
+```json
+{
+    "initiate_new_discussion": true|false,
+    "speech": "brief explanation why you initiate a new discussion to others (under 50 words)"
+}
+```
+
+Decision Rules:
+
+Set "initiate_new_discussion": true if:
+
+The estimated arrival time worsened significantly, like by 5 mins, or it exceeds the 09:25:00 limit.
+Other agents have already arrived or are very close, while this agent is significantly delayed.
+
+Set "initiate_new_discussion": false if:
+
+The agent has reached the destination.
+The agent is making progress as estimated. The estimated arrival time remains stable or become better.
+Delay is minor (< 15% increase) and temporary.
+No better alternative location is available or likely to help.
+—
+
+Example:
+
+{
+    "initiate_new_discussion": true,
+    "speech": "(explanation)"
+}
+or
+{
+    "initiate_new_discussion": no,
+    "speech": "ETA improves timingly."
+}
+
+—
+
+Be conservative but proactive. Don’t trigger unnecessary discussions — only when the current plan is clearly suboptimal or failing.
+
+Please generate your response now.

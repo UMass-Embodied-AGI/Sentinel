@@ -1,0 +1,756 @@
+{
+    "agent_names": [
+        "Sentinel 0",
+        "Sentinel 1",
+        "Sentinel 2",
+        "Sentinel 3",
+        "Sentinel 4",
+        "Sentinel 5",
+        "Sentinel 6",
+        "Sentinel 7",
+        "Sentinel 8",
+        "Sentinel 9",
+        "Sentinel 10",
+        "Sentinel 11",
+        "Sentinel 12",
+        "Sentinel 13",
+        "Sentinel 14",
+        "Sentinel 15",
+        "Sentinel 16",
+        "Sentinel 17",
+        "Sentinel 18",
+        "Sentinel 19"
+    ],
+    "agent_infos": [
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -138.62522499005712,
+                90.02324363754019,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -193.61754522653035,
+                96.48522941756418,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -176.49785723407558,
+                176.38031283009258,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -207.35000652251256,
+                95.30643356820211,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -132.00861223661946,
+                137.65117311690398,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                182.56328004433834,
+                144.80185779496384,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                57.69588176662562,
+                257.6384358199226,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                51.246115225082505,
+                -10.514894704585345,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -15.892613893116167,
+                235.9006512619056,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -77.36248446303665,
+                -133.3326229371394,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -36.612956397778085,
+                -143.8047710305023,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -101.16987204675496,
+                253.0512437948932,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -140.3825765424298,
+                66.96567459704264,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                97.6672705724043,
+                181.75109468027273,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                25.85851344231461,
+                -61.99447950522663,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -283.08148727991886,
+                -247.81888750514102,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -80.51471642195737,
+                -12.337574304563724,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -239.8732679353136,
+                85.65368199473133,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                242.26193128323467,
+                16.295804215101814,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                202.97875562257536,
+                -28.291770124377944,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        }
+    ],
+    "agent_poses": [
+        [
+            -138.62522499005712,
+            90.02324363754019,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -193.61754522653035,
+            96.48522941756418,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -176.49785723407558,
+            176.38031283009258,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -207.35000652251256,
+            95.30643356820211,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -132.00861223661946,
+            137.65117311690398,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            182.56328004433834,
+            144.80185779496384,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            57.69588176662562,
+            257.6384358199226,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            51.246115225082505,
+            -10.514894704585345,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -15.892613893116167,
+            235.9006512619056,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -77.36248446303665,
+            -133.3326229371394,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -36.612956397778085,
+            -143.8047710305023,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -101.16987204675496,
+            253.0512437948932,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -140.3825765424298,
+            66.96567459704264,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            97.6672705724043,
+            181.75109468027273,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            25.85851344231461,
+            -61.99447950522663,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -283.08148727991886,
+            -247.81888750514102,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -80.51471642195737,
+            -12.337574304563724,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -239.8732679353136,
+            85.65368199473133,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            242.26193128323467,
+            16.295804215101814,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            202.97875562257536,
+            -28.291770124377944,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "locator_colors": [
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan"
+    ],
+    "locator_colors_rgb": [
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "agent_skins": [
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb"
+    ],
+    "patrol_config": [
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        },
+        {
+            "type": "rotating"
+        }
+    ]
+}

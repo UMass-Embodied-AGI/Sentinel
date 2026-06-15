@@ -1,0 +1,78 @@
+$TaskDescription$
+
+You have just noticed active sentinels on your route. The original path may no longer be safe. Your task is to generate a new sequence of waypoints that safely lead to the destination while avoiding dangers whenever possible. You can look at the aerial view image of the surronding to help this.
+
+---
+
+### Input
+
+**Map Legend:**
+- red : Dangerous but transitable zone. There might be sentinels.
+- white: Transitable zone. 
+- black: Obstacles. Non-transitable zone. Note: the agent itself will mark obstacle area around some known sentinels as a circle with radius of 10. Don't mistaken these circles for real obstacles.
+- gray: Unknown area.
+The rest is also considered transitable zone:
+- green: Your current position.
+- purple: The Target Destination.
+- blue: Reference route — the original path that may become unsafe.
+
+The map is shown in the attached image.
+
+You also have your numeric position for reference:
+$SelfPose$
+
+Current local route suggestion: $route_local$
+Current global route suggestion: $route_global$
+
+And all known sentinel poses:
+$KnownSentinelPoses$
+
+---
+
+### Guidelines
+
+Generate a **new safe route** from your current position to the target destination:
+The route should be represented by a series of waypoints
+The route should not pass any dangerous zones unless necessary.
+The route should always starts from your current position.
+The waypoints should fulfill the following requirement:
+- The waypoints should be located in transitable zones.
+- The waypoints should not be located in dangerous zones, unless necessary.
+- The waypoints should guarantee connectivity. One can easily find its way by following the waypoints in order, with the possibility of lost its way minimized.
+- The waypoints should not be too dense. Try not place multiple waypoints along one street where there are no crossroads.
+You only need to find a partial route within the map range. Try output 3 to 5 waypoints.
+
+---
+
+### Output Format
+
+Output a **JSON object** listing the route's waypoints (each in `[x, y]` format), forming a route from 'A' to 'T', including 'T'.
+
+No explanations or comments — only the map and the JSON object.
+
+Example Input:
+
+You also have your numeric position for reference:
+[15.4, 18.5]
+
+Current local route suggestion: (20, 20) → (25, 29) → (30, 34) → (40, 40)
+Current global route suggestion: (20, 20) → (25, 29) → (30, 34) → (40, 40) → (47, 43) → (55, 40)(goal)
+
+And all known sentinel poses:
+[
+    [30, 30]
+]
+
+(and the aerial view image).
+
+Example output:
+
+```json
+[
+    [15.6, 30.5],
+    [20.3, 40.9],
+    [30.9, 45.7]
+]
+```
+
+Now generate your output.

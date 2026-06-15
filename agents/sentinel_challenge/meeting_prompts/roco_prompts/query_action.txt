@@ -1,0 +1,60 @@
+$TaskDescription$
+
+Now the agent is in a group discussion. Based on prior analysis, the agent has decided to retrieve some information. You need use your ability of spatial reasoning to generate a query action. You can query the map tool **at most once**.
+
+—
+
+**Input:**
+
+Current Time:
+$CurrentTime$
+
+- Agent’s Name: $SelfName$
+
+- Agent's position: $SelfPose$
+
+- Known Available Places:
+$Places$
+
+- Intent:
+$QueryIntent$
+
+—
+
+**Output Format:**
+
+Return a JSON object representing the operation chain:
+
+```json
+{
+    "type": "query_nearby|query_place|query_route",
+    "arg": "see below",
+    ...
+}
+```
+
+—
+
+You must select one from the available operations:
+
+{
+    "type": "query_nearby",
+    "coordinate": ["x-coordinate", "y-coordinate"] # this action will trigger a query sent to the map tool.
+    "radius": "r" # a float number, representing the radius of the query.
+}
+or
+{
+    "type": "query_place",
+    "place": "<Place name>" # this action will trigger a query sent to the map tool; you can only list one place here. If the place name is not in the Known Available Places, choose this.
+}
+or
+{
+    "type": "query_route",
+    "target": "<Target place name>" # this action will trigger a spatial reasoning chain to handle the query procedure; you can only list one place here.
+}
+
+—
+
+This output will be directly executed by the system to trigger navigation queries and spatial reasoning. Be precise — any deviation may cause parsing or execution failure.
+
+Please generate your response now.

@@ -1,0 +1,1992 @@
+{
+    "One Kennedy Square": {
+        "building_glb": "buildings_One Kennedy Square.glb",
+        "bounding_box": [
+            50.798590714339895,
+            -43.34372912216753,
+            128.1491241455078,
+            37.11199773476478,
+            73.64135906015076,
+            43.563385009765625,
+            0.5851494823661103
+        ],
+        "places": [
+            {
+                "name": "Starbucks",
+                "coarse_type": "food",
+                "fine_types": [
+                    "cafe",
+                    "store",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    1046.1001915931702,
+                    953.4135026931763,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            53.980135612760044,
+            -83.55242654753663
+        ]
+    },
+    "The Detroit Club": {
+        "building_glb": "buildings_The Detroit Club.glb",
+        "bounding_box": [
+            -217.88290791109895,
+            -223.2923461719123,
+            115.47357177734376,
+            24.24307520078893,
+            39.705176260942366,
+            15.116439819335938,
+            0.5268689301193654
+        ],
+        "places": [
+            {
+                "name": "Bohemia at The Detroit Club",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "night_club",
+                    "bar",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    782.9457015991211,
+                    777.2981643676758,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            },
+            {
+                "name": "Hotel at The Detroit Club",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    782.9457015991211,
+                    777.2981643676758,
+                    -12
+                ],
+                "scene": "indoor_scenes/accomodation-8.json"
+            },
+            {
+                "name": "Beverages and DM Store",
+                "coarse_type": "stores",
+                "fine_types": [
+                    "spa",
+                    "beauty_salon",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    782.9457015991211,
+                    777.2981643676758,
+                    -20
+                ],
+                "scene": "indoor_scenes/store-Beverages-DM.json"
+            }
+        ],
+        "outdoor_xy": [
+            -231.59905884566294,
+            -225.80909040795677
+        ]
+    },
+    "Detroit Free Press Building": {
+        "building_glb": "buildings_Detroit Free Press Building.glb",
+        "bounding_box": [
+            -222.23328233824537,
+            -173.53733347707367,
+            123.2557487487793,
+            63.14403484813217,
+            39.209276407383854,
+            31.53327178955078,
+            0.5270398971772151
+        ],
+        "places": [
+            {
+                "name": "The Press/321",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "real_estate_agency",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    777.766716003418,
+                    826.4625930786133,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-5.json"
+            }
+        ],
+        "outdoor_xy": [
+            -252.9424529303614,
+            -185.52612883648362
+        ]
+    },
+    "Buhl Building": {
+        "building_glb": "buildings_Buhl Building.glb",
+        "bounding_box": [
+            91.36088958171578,
+            -248.48791431768487,
+            159.64682388305667,
+            58.22907631001419,
+            36.235687702397186,
+            111.7821273803711,
+            0.5322207848526803
+        ],
+        "places": [
+            {
+                "name": "Buhl Bar",
+                "coarse_type": "food",
+                "fine_types": [
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1091.3976936340332,
+                    750.5899505615234,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            },
+            {
+                "name": "Buhl Building",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    1091.3976936340332,
+                    750.5899505615234,
+                    -8
+                ],
+                "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            79.16776229606036,
+            -233.4818455036317
+        ]
+    },
+    "Ally Detroit Center": {
+        "building_glb": "buildings_Ally Detroit Center.glb",
+        "bounding_box": [
+            257.60919189453125,
+            -176.90774536132812,
+            197.37088012695312,
+            49.34873962402344,
+            49.70307159423828,
+            185.12020874023438,
+            0.5291655659675598
+        ],
+        "places": [
+            {
+                "name": "Plum Market \u2013 Ally Detroit Center",
+                "coarse_type": "food",
+                "fine_types": [
+                    "grocery_or_supermarket",
+                    "cafe",
+                    "bar",
+                    "store",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1257.6224517822266,
+                    823.1520156860352,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            },
+            {
+                "name": "Beverages and Snacks Store",
+                "coarse_type": "stores",
+                "fine_types": [
+                    "car_dealer",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1257.6224517822266,
+                    823.1520156860352,
+                    -8
+                ],
+                "scene": "indoor_scenes/store-Beverages-Snacks.json"
+            }
+        ],
+        "outdoor_xy": [
+            231.66491931927868,
+            -162.1323727414644
+        ]
+    },
+    "Hotel Indigo": {
+        "building_glb": "buildings_Hotel Indigo.glb",
+        "bounding_box": [
+            -201.84449768066403,
+            -30.642772674560547,
+            126.70783996582031,
+            33.8807049902561,
+            37.306462008614005,
+            41.447662353515625,
+            0.0015179765000364763
+        ],
+        "places": [
+            {
+                "name": "Trolley Room Detroit.",
+                "coarse_type": "food",
+                "fine_types": [
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    798.1555938720703,
+                    969.3572273254395,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            },
+            {
+                "name": "Hotel Indigo Detroit Downtown, an IHG Hotel",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    798.1555938720703,
+                    969.3572273254395,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-5.json"
+            },
+            {
+                "building": "Hotel Indigo",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    798.1555938720703,
+                    969.3572273254395,
+                    -12
+                ],
+                "scene": "indoor_scenes/accomodation-5.json",
+                "name": "Layla Haddad's room at Hotel Indigo Detroit Downtown, an IHG Hotel"
+            }
+        ],
+        "outdoor_xy": [
+            -219.75891804329606,
+            -47.73973177351023
+        ]
+    },
+    "open space": {
+        "bounding_box": null,
+        "places": [
+            {
+                "name": "The Greening of Detroit - Lafayette Greens",
+                "coarse_type": "open",
+                "fine_types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    -102.55201394267924,
+                    -31.724764273020703,
+                    -0.0009022684871933251
+                ],
+                "scene": null
+            },
+            {
+                "name": "Cadillac Square Bus Stop",
+                "coarse_type": "transit",
+                "fine_type": "bus stop",
+                "location": [
+                    161.4483028206114,
+                    -22.808013611521325
+                ],
+                "scene": null
+            },
+            {
+                "name": "Shelby Street Bus Stop",
+                "coarse_type": "transit",
+                "fine_type": "bus stop",
+                "location": [
+                    -86.86399316235591,
+                    -115.57112890928369
+                ],
+                "scene": null
+            },
+            {
+                "name": "Washington Boulevard Bus Stop",
+                "coarse_type": "transit",
+                "fine_type": "bus stop",
+                "location": [
+                    -227.14865352914424,
+                    215.1107975807429
+                ],
+                "scene": null
+            },
+            {
+                "name": "Bicycle Sharing Station 1",
+                "coarse_type": "transit",
+                "fine_type": "bicycle station",
+                "location": [
+                    84.45736775052188,
+                    171.781173660121
+                ],
+                "scene": null
+            },
+            {
+                "name": "Bicycle Sharing Station 2",
+                "coarse_type": "transit",
+                "fine_type": "bicycle station",
+                "location": [
+                    -108.023841044584,
+                    -11.773207132607133
+                ],
+                "scene": null
+            },
+            {
+                "name": "Bicycle Sharing Station 3",
+                "coarse_type": "transit",
+                "fine_type": "bicycle station",
+                "location": [
+                    -235.7681507700008,
+                    -220.24129204678292
+                ],
+                "scene": null
+            },
+            {
+                "name": "Bicycle Sharing Station 4",
+                "coarse_type": "transit",
+                "fine_type": "bicycle station",
+                "location": [
+                    -24.2629832013028,
+                    189.9705379110076
+                ],
+                "scene": null
+            },
+            {
+                "name": "Bicycle Sharing Station 5",
+                "coarse_type": "transit",
+                "fine_type": "bicycle station",
+                "location": [
+                    -9.397046064414717,
+                    -234.05763460544557
+                ],
+                "scene": null
+            },
+            {
+                "name": "Bicycle Sharing Station 6",
+                "coarse_type": "transit",
+                "fine_type": "bicycle station",
+                "location": [
+                    -165.8144108188955,
+                    215.07522290123595
+                ],
+                "scene": null
+            }
+        ]
+    },
+    "The Westin Book Cadillac Detroit": {
+        "building_glb": "buildings_The Westin Book Cadillac Detroit.glb",
+        "bounding_box": [
+            -176.821044921875,
+            38.51941680908203,
+            158.79672241210938,
+            68.47006225585938,
+            45.92334747314453,
+            106.59537506103516,
+            0.013145167380571365
+        ],
+        "places": [
+            {
+                "name": "The Motor Bar",
+                "coarse_type": "food",
+                "fine_types": [
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    823.1789932250977,
+                    1038.2136731147766,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            },
+            {
+                "name": "The Westin Book Cadillac Detroit",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "hotel",
+                    "hotel"
+                ],
+                "location": [
+                    823.1789932250977,
+                    1038.2136731147766,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-4.json"
+            },
+            {
+                "building": "The Westin Book Cadillac Detroit",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "hotel",
+                    "hotel"
+                ],
+                "location": [
+                    823.1789932250977,
+                    1038.2136731147766,
+                    -12
+                ],
+                "scene": "indoor_scenes/accomodation-4.json",
+                "name": "Malik Okoro's room at The Westin Book Cadillac Detroit"
+            },
+            {
+                "building": "The Westin Book Cadillac Detroit",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "hotel",
+                    "hotel"
+                ],
+                "location": [
+                    823.1789932250977,
+                    1038.2136731147766,
+                    -16
+                ],
+                "scene": "indoor_scenes/accomodation-4.json",
+                "name": "Naomi Zhang's room at The Westin Book Cadillac Detroit"
+            },
+            {
+                "building": "The Westin Book Cadillac Detroit",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "hotel",
+                    "hotel"
+                ],
+                "location": [
+                    823.1789932250977,
+                    1038.2136731147766,
+                    -20
+                ],
+                "scene": "indoor_scenes/accomodation-4.json",
+                "name": "Rafael Costa's room at The Westin Book Cadillac Detroit"
+            },
+            {
+                "building": "The Westin Book Cadillac Detroit",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "hotel",
+                    "hotel"
+                ],
+                "location": [
+                    823.1789932250977,
+                    1038.2136731147766,
+                    -24
+                ],
+                "scene": "indoor_scenes/accomodation-4.json",
+                "name": "Theo Caldwell's room at The Westin Book Cadillac Detroit"
+            }
+        ],
+        "outdoor_xy": [
+            -212.08725370189714,
+            40.65948741740115
+        ]
+    },
+    "First State Bank": {
+        "building_glb": "buildings_First State Bank.glb",
+        "bounding_box": [
+            -19.339146579609995,
+            -42.783374503439596,
+            118.661865234375,
+            23.2187632005865,
+            18.550098131875636,
+            23.8416748046875,
+            0.5549494115473294
+        ],
+        "places": [
+            {
+                "name": "Fresh and Beverages Store",
+                "coarse_type": "stores",
+                "fine_types": [
+                    "store",
+                    "point_of_interest",
+                    "local_government_office",
+                    "establishment"
+                ],
+                "location": [
+                    980.8406653404236,
+                    957.0423936843872,
+                    -4
+                ],
+                "scene": "indoor_scenes/store-Fresh-Beverages.json"
+            }
+        ],
+        "outdoor_xy": [
+            -24.49859089485676,
+            -33.892569259611236
+        ]
+    },
+    "114 West Lafayette Boulevard": {
+        "building_glb": "buildings_element.008.glb",
+        "bounding_box": [
+            -49.4091588726114,
+            -15.766394745487279,
+            111.45375061035156,
+            25.54059719980788,
+            15.453014543212962,
+            9.549057006835938,
+            0.3028234817693629
+        ],
+        "places": [
+            {
+                "name": "American Coney Island",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    949.7582588195801,
+                    980.4919891357422,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -40.427895032416366,
+            -3.817847946136408
+        ]
+    },
+    "118 West Lafayette Boulevard": {
+        "building_glb": "buildings_element.075.glb",
+        "bounding_box": [
+            -64.41417468701529,
+            -20.2070556077946,
+            111.10904312133789,
+            5.7571113435769865,
+            18.580402627077834,
+            8.890327453613281,
+            0.30313238209953197
+        ],
+        "places": [
+            {
+                "name": "Lafayette Coney Island",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    935.3855361938477,
+                    978.9336638450623,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -63.97899133555426,
+            -9.289157875226982
+        ]
+    },
+    "Griswold Capitol Park": {
+        "building_glb": "buildings_Griswold Capitol Park.glb",
+        "bounding_box": [
+            -93.46975666202655,
+            33.18000534615047,
+            131.04362869262695,
+            87.17751103579315,
+            33.022748964467326,
+            50.341148376464844,
+            0.01036980624943694
+        ],
+        "places": [
+            {
+                "name": "CrossFit in the D",
+                "coarse_type": "entertainment",
+                "fine_types": [
+                    "gym",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    906.5216598510742,
+                    1033.1299982070923,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV4AFHQKTKJZ2AABAAAAAEA8.json"
+            },
+            {
+                "name": "Griswold Capitol Park",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments",
+                    "parking"
+                ],
+                "location": [
+                    906.5216598510742,
+                    1033.1299982070923,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-3.json"
+            }
+        ],
+        "outdoor_xy": [
+            -106.18355511770883,
+            15.535844944868337
+        ]
+    },
+    "Brisabar": {
+        "building_glb": "buildings_Brisabar.glb",
+        "bounding_box": [
+            125.0729634144782,
+            -35.90463662175216,
+            105.63214874267578,
+            18.051239344305362,
+            17.399429281114557,
+            0.1963958740234375,
+            -0.0024801434540356933
+        ],
+        "places": [
+            {
+                "name": "BrisaBar",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    1125.0534858703613,
+                    964.1176795959473,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            }
+        ],
+        "outdoor_xy": [
+            131.81767271201338,
+            -26.221620030017064
+        ]
+    },
+    "Campus Martius Fountain": {
+        "building_glb": "buildings_Campus Martius Fountain.glb",
+        "bounding_box": [
+            124.59204864501953,
+            -11.525463461875908,
+            105.55118560791016,
+            17.830428804963372,
+            17.599619644919773,
+            0.3178558349609375,
+            0.0012667193202227428
+        ],
+        "places": [
+            {
+                "name": "The Fountain Detroit",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "bar",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    1124.5920753479004,
+                    988.4745365381241,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            114.66873657541544,
+            -5.139117414696734
+        ]
+    },
+    "Parc": {
+        "building_glb": "buildings_Parc.glb",
+        "bounding_box": [
+            99.88159642417747,
+            -11.81556867895229,
+            108.6961669921875,
+            14.33351265189831,
+            21.02603529247337,
+            5.6235809326171875,
+            0.012139772953471226
+        ],
+        "places": [
+            {
+                "name": "Parc",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    1099.866798400879,
+                    988.1624467968941,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            }
+        ],
+        "outdoor_xy": [
+            91.62150680829821,
+            -4.177294573650534
+        ]
+    },
+    "First National Bank Building": {
+        "building_glb": "buildings_First National Bank Building.glb",
+        "bounding_box": [
+            220.536376953125,
+            -71.7525634765625,
+            156.63113403320312,
+            126.08989715576172,
+            69.62396240234375,
+            104.43657684326172,
+            -0.4966522753238678
+        ],
+        "places": [
+            {
+                "name": "Roasting Plant Coffee",
+                "coarse_type": "food",
+                "fine_types": [
+                    "cafe",
+                    "store",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    1220.8864822387695,
+                    917.9287872314453,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            220.14438631897656,
+            -30.806851201054208
+        ]
+    },
+    "Cadillac Tower": {
+        "building_glb": "buildings_Cadillac Tower.glb",
+        "bounding_box": [
+            260.91877746582037,
+            34.386455535888686,
+            171.3471221923828,
+            30.772281558664677,
+            29.23288506802768,
+            133.73431396484375,
+            0.004741850499250932
+        ],
+        "places": [
+            {
+                "name": "Cadillac Lodge",
+                "coarse_type": "food",
+                "fine_types": [
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1260.9187774658203,
+                    1034.3864555358887,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            },
+            {
+                "name": "Cadillac Tower",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    1260.9187774658203,
+                    1034.3864555358887,
+                    -12
+                ],
+                "scene": "indoor_scenes/accomodation-0.json"
+            }
+        ],
+        "outdoor_xy": [
+            273.2520834198485,
+            18.82832056256363
+        ]
+    },
+    "Farwell Building": {
+        "building_glb": "buildings_Farwell Building.glb",
+        "bounding_box": [
+            -158.82032012939456,
+            178.32506561279297,
+            121.57249069213867,
+            30.569683815424437,
+            38.00121147215839,
+            31.64752960205078,
+            0.007843581964288936
+        ],
+        "places": [
+            {
+                "name": "Leila",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    841.1796798706055,
+                    1178.3803787231445,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            },
+            {
+                "name": "Fresh and DM Store",
+                "coarse_type": "stores",
+                "fine_types": [
+                    "shoe_store",
+                    "clothing_store",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    841.1796798706055,
+                    1178.3803787231445,
+                    -8
+                ],
+                "scene": "indoor_scenes/store-Fresh-DM.json"
+            }
+        ],
+        "outdoor_xy": [
+            -164.08229427432758,
+            158.28257105261804
+        ]
+    },
+    "Malcomson Building": {
+        "building_glb": "buildings_Malcomson Building.glb",
+        "bounding_box": [
+            -159.06414795469192,
+            132.58946268892942,
+            117.77972793579102,
+            29.876273865500696,
+            15.842230082645601,
+            24.074729919433594,
+            0.013392439509375431
+        ],
+        "places": [
+            {
+                "name": "The Malcomson Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "real_estate_agency",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    840.9358520507812,
+                    1132.5894584655762,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-2.json"
+            },
+            {
+                "name": "Eat\u00f3ri Market",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "grocery_or_supermarket",
+                    "store",
+                    "point_of_interest",
+                    "food",
+                    "establishment"
+                ],
+                "location": [
+                    840.9358520507812,
+                    1132.5894584655762,
+                    -8
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -146.1530845999551,
+            141.6842987975294
+        ]
+    },
+    "The Albert": {
+        "building_glb": "buildings_The Albert.glb",
+        "bounding_box": [
+            -67.97072425319332,
+            159.47525695658913,
+            124.87011337280273,
+            29.42094393604332,
+            47.38959401784695,
+            37.93787384033203,
+            0.5203333702113538
+        ],
+        "places": [
+            {
+                "name": "Bad Luck Bar",
+                "coarse_type": "food",
+                "fine_types": [
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    932.0420570373535,
+                    1159.4660568237305,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            },
+            {
+                "name": "Fresh and Snacks Store",
+                "coarse_type": "stores",
+                "fine_types": [
+                    "clothing_store",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    932.0420570373535,
+                    1159.4660568237305,
+                    -8
+                ],
+                "scene": "indoor_scenes/store-Fresh-Snacks.json"
+            },
+            {
+                "name": "The Albert",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    932.0420570373535,
+                    1159.4660568237305,
+                    -16
+                ],
+                "scene": "indoor_scenes/accomodation-2.json"
+            },
+            {
+                "building": "The Albert",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    932.0420570373535,
+                    1159.4660568237305,
+                    -16
+                ],
+                "scene": "indoor_scenes/accomodation-2.json",
+                "name": "Adam Pierce's room at The Albert"
+            }
+        ],
+        "outdoor_xy": [
+            -80.55769283121975,
+            149.84203204266962
+        ]
+    },
+    "1001 Woodward Garage": {
+        "building_glb": "buildings_1001 Woodward Garage.glb",
+        "bounding_box": [
+            13.404423713684064,
+            89.62395858764651,
+            126.19886779785156,
+            32.36442474931079,
+            70.8433274831163,
+            40.583740234375,
+            0.531243661404896
+        ],
+        "places": [
+            {
+                "name": "Avalon Caf\u00e9 and Bakery",
+                "coarse_type": "food",
+                "fine_types": [
+                    "cafe",
+                    "bakery",
+                    "store",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1013.4044237136841,
+                    1090.8484153747559,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            41.27689658912787,
+            63.75771052632811
+        ]
+    },
+    "1241 Woodward Avenue": {
+        "building_glb": "buildings_element.044.glb",
+        "bounding_box": [
+            -43.80291938915393,
+            190.8512689026288,
+            127.07634735107422,
+            12.865053464090366,
+            30.086103451377657,
+            42.20600891113281,
+            -1.0443569246898463
+        ],
+        "places": [
+            {
+                "name": "The Hudson Cafe",
+                "coarse_type": "food",
+                "fine_types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    956.1949272155762,
+                    1190.8524017333984,
+                    -4
+                ],
+                "scene": "indoor_scenes/MWHLEPQKTIFZIAABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -59.66956280680676,
+            186.22456118227655
+        ]
+    },
+    "One Campus Martius": {
+        "building_glb": "buildings_One Campus Martius.glb",
+        "bounding_box": [
+            122.30052293639584,
+            128.1081377118648,
+            142.94170761108398,
+            124.81806743436205,
+            115.31673169093324,
+            73.77701568603516,
+            0.5266542348991473
+        ],
+        "places": [
+            {
+                "name": "Snacks and DM Store",
+                "coarse_type": "stores",
+                "fine_types": [
+                    "beauty_salon",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1110.6941986083984,
+                    1128.797939300537,
+                    -4
+                ],
+                "scene": "indoor_scenes/store-Snacks-DM.json"
+            },
+            {
+                "name": "True Market",
+                "coarse_type": "food",
+                "fine_types": [
+                    "convenience_store",
+                    "store",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "location": [
+                    1110.6941986083984,
+                    1128.797939300537,
+                    -8
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            }
+        ],
+        "outdoor_xy": [
+            192.05536582167412,
+            134.28829213856133
+        ]
+    },
+    "Skillman Branch": {
+        "building_glb": "buildings_Skillman Branch.glb",
+        "bounding_box": [
+            104.06956481933594,
+            260.7979736328125,
+            113.28225708007812,
+            37.907474517822266,
+            50.4849739074707,
+            13.364303588867188,
+            0.5282725691795349
+        ],
+        "places": [
+            {
+                "name": "Skillman Branch",
+                "coarse_type": "office",
+                "fine_types": [
+                    "yes",
+                    "library"
+                ],
+                "location": [
+                    1103.458999633789,
+                    1254.0712203979492,
+                    -4
+                ],
+                "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            133.60325402451534,
+            247.64926669549382
+        ]
+    },
+    "Kresge Bldg": {
+        "building_glb": "buildings_Kresge Bldg.glb",
+        "bounding_box": [
+            -18.878227508621016,
+            146.74869083928425,
+            127.43572998046875,
+            30.96765903171437,
+            22.151522217452875,
+            42.9615478515625,
+            0.5256990225987375
+        ],
+        "places": [
+            {
+                "name": "Kresge Bldg",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    981.3020210266113,
+                    1146.5972290039062,
+                    -4
+                ],
+                "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -36.26640818166125,
+            143.87211617586055
+        ]
+    },
+    "211 West Fort Street": {
+        "building_glb": "buildings_211 West Fort Street.glb",
+        "bounding_box": [
+            -90.65118927878564,
+            -254.04099461974636,
+            162.1940498352051,
+            32.62882350358423,
+            63.82843352210322,
+            113.16722869873047,
+            0.5198950810225904
+        ],
+        "places": [
+            {
+                "name": "211 West Fort Street",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    909.3488140106201,
+                    745.9589385986328,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -86.1786776271429,
+            -289.40605571008837
+        ]
+    },
+    "Murphy Building": {
+        "building_glb": "buildings_Murphy Building.glb",
+        "bounding_box": [
+            54.85810089111328,
+            -269.95452880859375,
+            116.31514358520509,
+            26.77838196773001,
+            36.29552268933959,
+            25.24028778076172,
+            0.5370020972604231
+        ],
+        "places": [
+            {
+                "name": "Murphy Building",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    1054.8581008911133,
+                    729.9953460693359,
+                    -4
+                ],
+                "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            62.71964434296143,
+            -287.5584384228451
+        ]
+    },
+    "The Qube": {
+        "building_glb": "buildings_The Qube.glb",
+        "bounding_box": [
+            114.91724095609248,
+            -136.1604717034295,
+            138.7156867980957,
+            39.54085284911711,
+            85.26707023472619,
+            69.3884506225586,
+            0.5264903316197388
+        ],
+        "places": [
+            {
+                "name": "The Qube",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    1114.9123573303223,
+                    863.841064453125,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            124.7535700465196,
+            -111.75027900331807
+        ]
+    },
+    "Louis Kamper Apts": {
+        "building_glb": "buildings_Louis Kamper Apts.glb",
+        "bounding_box": [
+            -195.83339695590124,
+            243.58148956273126,
+            141.28773117065427,
+            30.547256354606624,
+            15.473744694342496,
+            71.32294464111328,
+            0.005804014171061041
+        ],
+        "places": [
+            {
+                "name": "Louis Kamper Apts",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    804.1666030883789,
+                    1243.5814895629883,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-6.json"
+            },
+            {
+                "building": "Louis Kamper Apts",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    804.1666030883789,
+                    1243.5814895629883,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-6.json",
+                "name": "Emily Johnson's room at Louis Kamper Apts"
+            }
+        ],
+        "outdoor_xy": [
+            -179.59900959863458,
+            250.3896193248715
+        ]
+    },
+    "Federal Reserve Building": {
+        "building_glb": "buildings_Federal Reserve Building.glb",
+        "bounding_box": [
+            -41.43171634838186,
+            -120.05126063321207,
+            122.01822662353516,
+            57.99363846029879,
+            39.07974973682863,
+            28.694931030273438,
+            0.5238208665703878
+        ],
+        "places": [
+            {
+                "name": "Federal Reserve Building",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    956.3205618858337,
+                    879.8981018066406,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -50.6094438727454,
+            -101.6322954680576
+        ]
+    },
+    "Penobscot Annex": {
+        "building_glb": "buildings_Penobscot Annex.glb",
+        "bounding_box": [
+            29.620986938476562,
+            -218.17359924316406,
+            144.9505157470703,
+            26.975534439086914,
+            39.17242431640625,
+            81.0976333618164,
+            0.5343833565711975
+        ],
+        "places": [
+            {
+                "name": "Penobscot Annex",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    1029.621473312378,
+                    781.8255462646484,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            28.87886309149434,
+            -194.691559622046
+        ]
+    },
+    "Capitol Park Building": {
+        "building_glb": "buildings_Capitol Park Building.glb",
+        "bounding_box": [
+            -87.56836102187133,
+            70.62861508798512,
+            124.9261589050293,
+            38.032157390225876,
+            31.359173300135172,
+            38.056068420410156,
+            0.0012140959119967504
+        ],
+        "places": [
+            {
+                "name": "Capitol Park Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    912.4307479858398,
+                    1070.605749130249,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-5.json"
+            },
+            {
+                "building": "Capitol Park Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    912.4307479858398,
+                    1070.605749130249,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-5.json",
+                "name": "Elizabeth Mensah's room at Capitol Park Building"
+            },
+            {
+                "building": "Capitol Park Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    912.4307479858398,
+                    1070.605749130249,
+                    -12
+                ],
+                "scene": "indoor_scenes/accomodation-5.json",
+                "name": "Megan Carter's room at Capitol Park Building"
+            }
+        ],
+        "outdoor_xy": [
+            -67.56738617259452,
+            83.08116550552204
+        ]
+    },
+    "Julian C. Madison Building": {
+        "building_glb": "buildings_Julian C. Madison Building.glb",
+        "bounding_box": [
+            -196.01788330078125,
+            266.9808502197265,
+            118.56494903564452,
+            30.563559453139995,
+            31.388722325159062,
+            25.654739379882812,
+            0.007843279713176585
+        ],
+        "places": [
+            {
+                "name": "Julian C. Madison Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    803.9821166992188,
+                    1267.0031204223633,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-4.json"
+            },
+            {
+                "building": "Julian C. Madison Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    803.9821166992188,
+                    1267.0031204223633,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-4.json",
+                "name": "Brycer Rodriguez's room at Julian C. Madison Building"
+            }
+        ],
+        "outdoor_xy": [
+            -181.8003139709597,
+            283.7872395490707
+        ]
+    },
+    "Bamlet Building": {
+        "building_glb": "buildings_Bamlet Building.glb",
+        "bounding_box": [
+            -159.04600524902344,
+            206.58352661132812,
+            118.64411926269531,
+            30.643484104924138,
+            18.646454340433944,
+            25.762664794921875,
+            0.003620084806088705
+        ],
+        "places": [
+            {
+                "name": "Bamlet Building",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    840.9539947509766,
+                    1206.577980041504,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -150.923553524471,
+            216.93622551745614
+        ]
+    },
+    "Metropole Building": {
+        "building_glb": "buildings_Metropole Building.glb",
+        "bounding_box": [
+            197.80290634989774,
+            -93.68671715613425,
+            113.44805908203125,
+            29.94044518874434,
+            31.43768832569975,
+            17.589004516601562,
+            0.5311807735790527
+        ],
+        "places": [
+            {
+                "name": "Metropole Building",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    1197.7991104125977,
+                    904.9141731262207,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            177.2617254090328,
+            -90.25058315255932
+        ]
+    },
+    "220 West": {
+        "building_glb": "buildings_220 West.glb",
+        "bounding_box": [
+            -52.89819872669329,
+            -264.3918466838666,
+            115.15615081787111,
+            18.492371838717204,
+            42.61772235670692,
+            20.453277587890625,
+            0.5349861248475408
+        ],
+        "places": [
+            {
+                "name": "220 West",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    947.9048118591309,
+                    735.5724411010742,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -49.81124914837399,
+            -288.4946364800774
+        ]
+    },
+    "Comerica / Detroit Trust Company": {
+        "building_glb": "buildings_Comerica _ Detroit Trust Company.glb",
+        "bounding_box": [
+            -63.44363021850586,
+            -219.96089935302737,
+            115.47777557373048,
+            45.83147349999873,
+            44.79279899073322,
+            17.899826049804688,
+            0.5299222221243514
+        ],
+        "places": [
+            {
+                "name": "Comerica / Detroit Trust Company",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    936.5564441680908,
+                    780.0391006469727,
+                    -4
+                ],
+                "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -63.19456602208228,
+            -192.69962389901178
+        ]
+    },
+    "U.S. Mortgage Bond Building": {
+        "building_glb": "buildings_U.S. Mortgage Bond Building.glb",
+        "bounding_box": [
+            -27.713542806715665,
+            -262.67926403861026,
+            122.50907135009767,
+            26.659801864987813,
+            20.055486590340223,
+            35.46421813964844,
+            0.5306249024679711
+        ],
+        "places": [
+            {
+                "name": "U.S. Mortgage Bond Building",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    972.2852854728699,
+                    737.3645401000977,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -10.358889748892587,
+            -265.2822270471555
+        ]
+    },
+    "Chancery Bldg": {
+        "building_glb": "buildings_Chancery Bldg.glb",
+        "bounding_box": [
+            -195.36179020248966,
+            150.63524142090264,
+            118.83124923706055,
+            30.334139357771704,
+            18.168158881050623,
+            26.33942413330078,
+            0.009146615502155387
+        ],
+        "places": [
+            {
+                "name": "Chancery Bldg",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    804.5754623413086,
+                    1150.635269165039,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV7J6NIKTKJZ2AABAAAAAAA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -179.2081416722616,
+            152.1764729581064
+        ]
+    },
+    "Spkr Box": {
+        "building_glb": "buildings_Spkr Box.glb",
+        "bounding_box": [
+            -150.99171475376204,
+            242.39216471447136,
+            108.81187438964842,
+            4.434783385071954,
+            16.87718509674382,
+            5.68438720703125,
+            0.2679331932106937
+        ],
+        "places": [
+            {
+                "name": "Spkr Box",
+                "coarse_type": "food",
+                "fine_types": [
+                    "yes",
+                    "cafe"
+                ],
+                "location": [
+                    851.0887756347656,
+                    1242.951416015625,
+                    -4
+                ],
+                "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -146.30503990469825,
+            237.47387366613324
+        ]
+    },
+    "Security Trust Lofts": {
+        "building_glb": "buildings_Security Trust Lofts.glb",
+        "bounding_box": [
+            -9.38951301574707,
+            -59.18147277832031,
+            122.53839111328125,
+            23.574853897094727,
+            19.822664260864258,
+            31.5947265625,
+            0.554378867149353
+        ],
+        "places": [
+            {
+                "name": "Security Trust Lofts",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    990.7653558254242,
+                    940.8342533111572,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-5.json"
+            },
+            {
+                "building": "Security Trust Lofts",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    990.7653558254242,
+                    940.8342533111572,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-5.json",
+                "name": "Eve By J Gonzales's room at Security Trust Lofts"
+            }
+        ],
+        "outdoor_xy": [
+            4.913519666776633,
+            -63.15922769097063
+        ]
+    },
+    "Fowler Building": {
+        "building_glb": "buildings_Fowler Building.glb",
+        "bounding_box": [
+            -35.97510100281413,
+            176.87062753611423,
+            124.63850784301758,
+            30.43753678262825,
+            19.432896486392544,
+            37.282554626464844,
+            0.5183131761275905
+        ],
+        "places": [
+            {
+                "name": "Fowler Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    964.197732925415,
+                    1176.8706283569336,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-3.json"
+            },
+            {
+                "building": "Fowler Building",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    964.197732925415,
+                    1176.8706283569336,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-3.json",
+                "name": "Kate Novak's room at Fowler Building"
+            }
+        ],
+        "outdoor_xy": [
+            -54.73828356445099,
+            177.03207680521638
+        ]
+    },
+    "Traver Bldg": {
+        "building_glb": "buildings_Traver Bldg.glb",
+        "bounding_box": [
+            -27.750091552734375,
+            162.34339904785156,
+            119.62954711914062,
+            13.95504093170166,
+            30.335403442382812,
+            27.34918212890625,
+            -1.0524832010269165
+        ],
+        "places": [
+            {
+                "name": "Traver Bldg",
+                "coarse_type": "office",
+                "fine_types": [
+                    "office"
+                ],
+                "location": [
+                    972.2499294281006,
+                    1162.3433990478516,
+                    -4
+                ],
+                "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json"
+            }
+        ],
+        "outdoor_xy": [
+            -40.21104955250473,
+            151.5576767874518
+        ]
+    },
+    "Bedell Bldg": {
+        "building_glb": "buildings_Bedell Bldg.glb",
+        "bounding_box": [
+            -52.798121473519146,
+            206.3580409572729,
+            127.23201751708984,
+            29.974279361785356,
+            23.171360030763772,
+            42.75660705566406,
+            0.5203607370347897
+        ],
+        "places": [
+            {
+                "name": "Bedell Bldg",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    945.6000175476074,
+                    1206.29248046875,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-8.json"
+            },
+            {
+                "building": "Bedell Bldg",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    945.6000175476074,
+                    1206.29248046875,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-8.json",
+                "name": "Leonard Park's room at Bedell Bldg"
+            }
+        ],
+        "outdoor_xy": [
+            -34.95877721241546,
+            207.38181442235907
+        ]
+    },
+    "45 W Grand River": {
+        "building_glb": "buildings_45 W Grand River.glb",
+        "bounding_box": [
+            -112.00080719315338,
+            216.28989061623935,
+            116.30782318115233,
+            12.325262930538315,
+            18.2402290613743,
+            20.599456787109375,
+            0.5260477613634285
+        ],
+        "places": [
+            {
+                "name": "45 W Grand River",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    888.0002059936523,
+                    1216.2952270507812,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-0.json"
+            },
+            {
+                "building": "45 W Grand River",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    888.0002059936523,
+                    1216.2952270507812,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-0.json",
+                "name": "Shannon Steves's room at 45 W Grand River"
+            }
+        ],
+        "outdoor_xy": [
+            -103.98413795042084,
+            209.24224792870265
+        ]
+    },
+    "28 Grand": {
+        "building_glb": "buildings_28 Grand.glb",
+        "bounding_box": [
+            -124.54118544160983,
+            262.1976262094179,
+            142.69587707519528,
+            24.06140321194037,
+            37.11591675898298,
+            0.0,
+            0.5280478261920806
+        ],
+        "places": [
+            {
+                "name": "28 Grand",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    879.1999893188477,
+                    1261.3353271484375,
+                    -4
+                ],
+                "scene": "indoor_scenes/accomodation-8.json"
+            },
+            {
+                "building": "28 Grand",
+                "coarse_type": "accommodation",
+                "fine_types": [
+                    "apartments"
+                ],
+                "location": [
+                    879.1999893188477,
+                    1261.3353271484375,
+                    -8
+                ],
+                "scene": "indoor_scenes/accomodation-8.json",
+                "name": "Louise Roberts's room at 28 Grand"
+            }
+        ],
+        "outdoor_xy": [
+            -131.69561171327754,
+            248.600742281735
+        ]
+    }
+}

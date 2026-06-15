@@ -1,0 +1,105 @@
+$TaskDescription$
+
+The agent just received a new message.  
+Your job has **two parts**:
+
+1. Decide whether it is time to **start a new discussion or participate the current discussion** to coordinate a suitable meeting place.
+2. Extract all available **ETA information**, **agent poses**, and **sentinel poses** from the shared conversation history.
+
+---
+
+### Informations:
+
+**Agent's Name:**  
+$SelfName$
+
+**Agent List:**  
+$AgentList$
+
+**Available Places:**  
+$Places$
+
+**Conversation History so far:**  
+$ConversationHistory$
+
+---
+
+### **Output Format**
+
+Return a JSON object with the following structure:
+
+```json
+{
+    "initiate_discussion": true|false,
+    "ETA Map": {
+        "<Place Name>": {
+            "Agent1": "00:00:15",
+            "Agent2": "Impossible"
+        }
+    },
+    "Agent Poses": {
+        "Agent1": [0.0, 80.0],
+        "Agent2": [-45.0, 120.0]
+    },
+    "Sentinel Poses": [
+        [-55.0, 176.0, 99.9],
+        [12.0, 94.0, 98.7]
+    ]
+}
+```
+
+---
+
+### **Part 1: Discussion Decision Rules**
+
+Set `"initiate_discussion": true` if:
+
+- The recently received message clearly indicates **intention to start** or **need to coordinate** a new discussion or meeting place.
+- The current discussion appears to have concluded and a new topic or location is emerging.
+- The agent is explicitly called upon to make a new decision (“Where should we go next?”, “Let’s regroup”, etc.).
+- The message suggests a discussion is ongoing and it need my participation.
+
+Set it to `false` if:
+
+- The message only provides new information (e.g., reporting sentinel sightings, position updates, or ETAs).
+- There’s no clear intent or trigger to start a new round of coordination.
+
+---
+
+### **Part 2: Information Extraction Rules**
+
+Extract structured information from conversation history and the most recent message:
+
+- **ETA Map**:
+  - Keys: Place names from `$Places`, enclosed in `<>`.
+  - Values: Sub-objects mapping agent names → ETA strings (`"HH:MM:SS"` format) or `"Impossible"`.
+  - Include:
+    - Other agents’ ETAs mentioned in the conversation.
+  - If multiple ETAs for the same agent–place pair, keep the most recent.
+  - Omit places with no ETA.
+
+- **Agent Poses**:
+  - Keys: Agent names.
+  - Values: `[x, y]` coordinates extracted from the conversation.
+  - Example mention: “I’m currently at [-133.75, 62.37]”.
+
+- **Sentinel Poses**:
+  - A list of all detected sentinel coordinates extracted from the conversation.
+  - Example mention: “I see a sentinel at [-55.0, 176.0, 98.58]”.
+
+Parsing guidelines:
+- Only extract numeric ETAs explicitly tied to a **place** and **agent**.
+- Use `"Impossible"` for statements like “I can’t reach <Park>”.
+- Ignore vague estimates like “soon” or “around 10 minutes” unless a number is clearly stated.
+- Match agent names exactly as they appear in `$AgentList`.
+
+---
+
+### **Output Notes**
+- Always return **valid JSON** in the format above.
+- Be accurate and conservative: include only clearly stated and verifiable information.
+- If no ETAs or poses are found, use empty objects/lists (`{}` or `[]`) for those fields.
+
+---
+
+**Now produce your response following the format exactly.**

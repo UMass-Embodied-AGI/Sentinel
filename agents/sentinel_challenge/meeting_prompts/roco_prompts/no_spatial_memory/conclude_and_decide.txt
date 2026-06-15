@@ -1,0 +1,101 @@
+$TaskDescription$
+
+The agents are now in a group discussion.  
+The goal is to select — from the provided list — the location that minimizes the travel time of the LAST agent to arrive.
+
+Your task involves two steps:
+
+1. **Summarize each agent’s current preferred location or stance** based on the conversation history.
+2. **Determine whether all agents have reached full agreement** on a single meeting location.
+
+---
+
+### Informations:
+
+Current Time:
+$CurrentTime$
+
+Agent's Name:
+$SelfName$
+
+Agent list:
+$AgentList$
+
+Place list:
+$Places$
+
+Conversation History so far:
+$ConversationHistory$
+
+Note: The team only shares the conversation history, not all internal information.
+
+---
+
+### Step 1 — Summarize Agent Opinions
+
+Guidelines:
+
+- Be objective and factual — reflect what each agent has explicitly stated or implied.  
+- If an agent hasn’t spoken or is ambiguous, note that (e.g., “undecided”, “waiting for info”).  
+- Use clear, concise phrases (under 15 words per agent).  
+- Do not invent opinions — only infer from available conversation.  
+- Use exact place names from the list, enclosed in <>, e.g., <Central Park>.  
+
+**Output 1 Format:**
+
+Return a JSON object where each key is an agent’s name and each value is their current opinion:
+
+```json
+{
+    "agent_name1": "agent_opinion1",
+    "agent_name2": "agent_opinion2",
+    "agent_name3": "agent_opinion3",
+    ...
+}
+```
+
+Step 2 — Check for Full Agreement
+
+Using the summarized opinions from Step 1, determine if every agent explicitly supports the same location.
+
+Guidelines:
+
+- Be strict: Agreement means unanimous consensus — no exceptions.
+- If any agent is “undecided”, “waiting”, or prefers a different location → agreement_reached = false.
+- Do not infer or assume compromise. However, if someone has made a finalization and there are no objections in 5 seconds, you can assume an agreement has been reached.
+- If one agent did not response for a while (e.g., over 10s), consider the probability of it being caught, in which case it's opinion doesn't matter to the agreement.
+- Use exact string matching for place names (e.g., <Central Park> ≠ Central Park).
+
+Output 2 Format:
+
+Return a JSON object:
+
+```json
+{
+    "agreement_reached": true|false,
+    "agreed_location": "<Place Name>" | null
+}
+```
+
+If all agents prefer the same location, set `"agreement_reached": true` and `"agreed_location"` to that location.
+Otherwise, set "agreement_reached": false and `"agreed_location"` to the most supported location.
+
+Final Output
+
+Return both results in one JSON object, using this structure:
+
+```json
+{
+    "agent_opinions": {
+        "agent_name1": "agent_opinion1",
+        "agent_name2": "agent_opinion2",
+        ...
+    },
+    "agreement_check": {
+        "agreement_reached": true|false,
+        "agreed_location": "<Place Name>" | null
+    }
+}
+```
+
+Finally, return only a valid JSON object in the format shown above.

@@ -1,0 +1,52 @@
+$TaskDescription$
+
+All agent participate in the task:
+
+$AgentList$
+
+Given my character description and situation, help me determine what I should do.
+
+My Character Description:
+
+$Character$
+
+Current Time:
+
+$Time$
+
+Current Place:
+
+$Place$
+
+Known Places:
+
+$KnownPlaces$
+
+Current Situation:
+
+$Context$
+
+Current conversation history:
+
+$Conversation_history$
+
+Previous Actions:
+
+$ActionHistory$
+
+Available Actions:
+
+1. go to <place>. <place> is the name of a place you can find in Known Places. <place> must be extactly the name of the Known Places!
+2. query <Place>. Use this action if there is a place mentioned that you don't know (not in Known Places). Note <map tool> is not a <Place> and hence invalid.
+3. complete task. Use this action to signal task completion and confirm you have arrived at the desired meeting place. The task is only considered finish if all of you complete task!
+
+Guidance:
+
+- Always use full place name in your output; otherwise it will lead to unknown behavior!
+- Keep progress over perfection! Find one location and go! If you don't reach the destination in 25 minutes, you will all get killed.
+- The game is only considered finish if all of you complete task. If any of you are still speaking or maneuvering, the game will be never considered success. 
+- If you previously choose the 'complete task' action and the game is not ending, that means there are still others not completing task. In that case, you can choose 'complete task' again.
+
+Output Format:
+
+You should only output the action without any quotations. For example: 'go to <GDW Fulfillment>', 'query <Center Park>', 'complete task'. Notice that you cannot choose "speak" action although it may appear in the Previous Actions. Your output shall match the format exactly. For example, "query map tool" is strictly prohibited.

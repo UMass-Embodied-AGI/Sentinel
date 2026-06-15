@@ -1,0 +1,424 @@
+{
+    "Kate Novak": {
+        "age": 23,
+        "living_place": "Fowler Building",
+        "appearance": "assets/imgs/avatars/Kate Novak.png",
+        "groups": [
+            "Green Thumbs"
+        ]
+    },
+    "Megan Carter": {
+        "age": 10,
+        "living_place": "Capitol Park Building",
+        "appearance": "assets/imgs/avatars/Megan Carter.png",
+        "groups": [
+            "Green Thumbs"
+        ]
+    },
+    "Green Thumbs": {
+        "description": "A community group focused on urban agriculture and environmental sustainability.",
+        "place": "The Greening of Detroit - Lafayette Greens",
+        "members": [
+            "Brycer Rodriguez",
+            "Kate Novak",
+            "Megan Carter"
+        ],
+        "daily_activity": "planting and maintaining community gardens from 16:00 to 18:00"
+    },
+    "Brycer Rodriguez's room at Julian C. Madison Building": {
+        "building": "Julian C. Madison Building",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            803.9821166992188,
+            1267.0031204223633,
+            -8
+        ],
+        "scene": "indoor_scenes/accomodation-4.json",
+        "name": "Brycer Rodriguez's room at Julian C. Madison Building",
+        "bounding_box": [
+            -196.01788330078125,
+            266.9808502197265,
+            118.56494903564452,
+            30.563559453139995,
+            31.388722325159062,
+            25.654739379882812,
+            0.007843279713176585
+        ]
+    },
+    "The Greening of Detroit - Lafayette Greens": {
+        "building": "open space",
+        "coarse_type": "open",
+        "fine_types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            897.4479860573208,
+            968.2752357269793,
+            -0.0009022684871933251
+        ],
+        "scene": null,
+        "bounding_box": null
+    },
+    "Beverages and Snacks Store": {
+        "building": "Ally Detroit Center",
+        "coarse_type": "stores",
+        "fine_types": [
+            "car_dealer",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            1257.6224517822266,
+            823.1520156860352,
+            -8
+        ],
+        "scene": "indoor_scenes/store-Beverages-Snacks.json",
+        "bounding_box": [
+            257.60919189453125,
+            -176.90774536132812,
+            197.37088012695312,
+            49.34873962402344,
+            49.70307159423828,
+            185.12020874023438,
+            0.5291655659675598
+        ]
+    },
+    "Skillman Branch": {
+        "building": "Skillman Branch",
+        "coarse_type": "office",
+        "fine_types": [
+            "yes",
+            "library"
+        ],
+        "location": [
+            1103.458999633789,
+            1254.0712203979492,
+            -4
+        ],
+        "scene": "indoor_scenes/MVSGSAIKTKJ66AABAAAAAEA8.json",
+        "bounding_box": [
+            104.06956481933594,
+            260.7979736328125,
+            113.28225708007812,
+            37.907474517822266,
+            50.4849739074707,
+            13.364303588867188,
+            0.5282725691795349
+        ]
+    },
+    "The Westin Book Cadillac Detroit": {
+        "building": "The Westin Book Cadillac Detroit",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "hotel",
+            "hotel"
+        ],
+        "location": [
+            823.1789932250977,
+            1038.2136731147766,
+            -8
+        ],
+        "scene": "indoor_scenes/accomodation-4.json",
+        "bounding_box": [
+            -176.821044921875,
+            38.51941680908203,
+            158.79672241210938,
+            68.47006225585938,
+            45.92334747314453,
+            106.59537506103516,
+            0.013145167380571365
+        ]
+    },
+    "Lafayette Coney Island": {
+        "building": "118 West Lafayette Boulevard",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            935.3855361938477,
+            978.9336638450623,
+            -4
+        ],
+        "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json",
+        "bounding_box": [
+            -64.41417468701529,
+            -20.2070556077946,
+            111.10904312133789,
+            5.7571113435769865,
+            18.580402627077834,
+            8.890327453613281,
+            0.30313238209953197
+        ]
+    },
+    "Leila": {
+        "building": "Farwell Building",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            841.1796798706055,
+            1178.3803787231445,
+            -4
+        ],
+        "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json",
+        "bounding_box": [
+            -158.82032012939456,
+            178.32506561279297,
+            121.57249069213867,
+            30.569683815424437,
+            38.00121147215839,
+            31.64752960205078,
+            0.007843581964288936
+        ]
+    },
+    "Parc": {
+        "building": "Parc",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            1099.866798400879,
+            988.1624467968941,
+            -4
+        ],
+        "scene": "indoor_scenes/MV5M25QKTKJZ2AABAAAAAAI8.json",
+        "bounding_box": [
+            99.88159642417747,
+            -11.81556867895229,
+            108.6961669921875,
+            14.33351265189831,
+            21.02603529247337,
+            5.6235809326171875,
+            0.012139772953471226
+        ]
+    },
+    "Fresh and DM Store": {
+        "building": "Farwell Building",
+        "coarse_type": "stores",
+        "fine_types": [
+            "shoe_store",
+            "clothing_store",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            841.1796798706055,
+            1178.3803787231445,
+            -8
+        ],
+        "scene": "indoor_scenes/store-Fresh-DM.json",
+        "bounding_box": [
+            -158.82032012939456,
+            178.32506561279297,
+            121.57249069213867,
+            30.569683815424437,
+            38.00121147215839,
+            31.64752960205078,
+            0.007843581964288936
+        ]
+    },
+    "Fresh and Beverages Store": {
+        "building": "First State Bank",
+        "coarse_type": "stores",
+        "fine_types": [
+            "store",
+            "point_of_interest",
+            "local_government_office",
+            "establishment"
+        ],
+        "location": [
+            980.8406653404236,
+            957.0423936843872,
+            -4
+        ],
+        "scene": "indoor_scenes/store-Fresh-Beverages.json",
+        "bounding_box": [
+            -19.339146579609995,
+            -42.783374503439596,
+            118.661865234375,
+            23.2187632005865,
+            18.550098131875636,
+            23.8416748046875,
+            0.5549494115473294
+        ]
+    },
+    "CrossFit in the D": {
+        "building": "Griswold Capitol Park",
+        "coarse_type": "entertainment",
+        "fine_types": [
+            "gym",
+            "health",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            906.5216598510742,
+            1033.1299982070923,
+            -4
+        ],
+        "scene": "indoor_scenes/MV4AFHQKTKJZ2AABAAAAAEA8.json",
+        "bounding_box": [
+            -93.46975666202655,
+            33.18000534615047,
+            131.04362869262695,
+            87.17751103579315,
+            33.022748964467326,
+            50.341148376464844,
+            0.01036980624943694
+        ]
+    },
+    "Cadillac Square Bus Stop": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bus stop",
+        "location": [
+            161.4483028206114,
+            -22.808013611521325
+        ],
+        "rotation": -1.5640466217041311,
+        "bounding_box": null
+    },
+    "Shelby Street Bus Stop": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bus stop",
+        "location": [
+            -86.86399316235591,
+            -115.57112890928369
+        ],
+        "rotation": -1.0302152296250702,
+        "bounding_box": null
+    },
+    "Washington Boulevard Bus Stop": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bus stop",
+        "location": [
+            -227.14865352914424,
+            215.1107975807429
+        ],
+        "rotation": -0.0006155934257629443,
+        "bounding_box": null
+    },
+    "Bicycle Sharing Station 1": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bike station",
+        "location": [
+            84.45736775052188,
+            171.781173660121
+        ],
+        "bounding_box": null
+    },
+    "Bicycle Sharing Station 2": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bike station",
+        "location": [
+            -108.023841044584,
+            -11.773207132607133
+        ],
+        "bounding_box": null
+    },
+    "Bicycle Sharing Station 3": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bike station",
+        "location": [
+            -235.7681507700008,
+            -220.24129204678292
+        ],
+        "bounding_box": null
+    },
+    "Bicycle Sharing Station 4": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bike station",
+        "location": [
+            -24.2629832013028,
+            189.9705379110076
+        ],
+        "bounding_box": null
+    },
+    "Bicycle Sharing Station 5": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bike station",
+        "location": [
+            -9.397046064414717,
+            -234.05763460544557
+        ],
+        "bounding_box": null
+    },
+    "Bicycle Sharing Station 6": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bike station",
+        "location": [
+            -165.8144108188955,
+            215.07522290123595
+        ],
+        "bounding_box": null
+    },
+    "transit_schedule": {
+        "To Washington Boulevard": [
+            {
+                "stop_name": "Cadillac Square Bus Stop",
+                "frequency": 15,
+                "first_bus": "06:00",
+                "last_bus": "22:00"
+            },
+            {
+                "stop_name": "Shelby Street Bus Stop",
+                "frequency": 15,
+                "first_bus": "06:01",
+                "last_bus": "22:01"
+            },
+            {
+                "stop_name": "Washington Boulevard Bus Stop",
+                "frequency": 15,
+                "first_bus": "06:03",
+                "last_bus": "22:03"
+            }
+        ],
+        "To Cadillac Square": [
+            {
+                "stop_name": "Washington Boulevard Bus Stop",
+                "frequency": 15,
+                "first_bus": "06:03",
+                "last_bus": "22:03"
+            },
+            {
+                "stop_name": "Shelby Street Bus Stop",
+                "frequency": 15,
+                "first_bus": "06:04",
+                "last_bus": "22:04"
+            },
+            {
+                "stop_name": "Cadillac Square Bus Stop",
+                "frequency": 15,
+                "first_bus": "06:06",
+                "last_bus": "22:06"
+            }
+        ]
+    }
+}

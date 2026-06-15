@@ -1,0 +1,99 @@
+$TaskDescription$
+
+Now the agent is in a group discussion. The agent has already decided its **speech intent** and now needs to generate the **exact spoken message** to send to the group. $Stalling$
+
+—
+
+**Input:**
+
+Current Time:
+$CurrentTime$
+
+- Your Agent's Name: $SelfName$
+
+- Your Agent's position: $SelfPose$
+
+- Other Agents' Opinions:
+$AgentOpinions$
+
+- Place list:
+$Places$
+
+- Known agent positions (contains agents' locations extracted from previous conversation):
+$KnownPoses$
+
+- Extracted ETA Map (contains agents' computed ETAs to specific places known by this agent):
+$KnownETA$
+
+- Reported sentinel poses (already broadcast to the team):
+$KnownSentinelPoses$
+
+- Unreported sentinel poses (observed by you, not yet broadcast — if non-empty, your speech MUST include each coordinate verbatim):
+$UnreportedSentinels$
+
+- Current ETA to your current goal (or "N/A" if no committed goal):
+$CurrentETA$
+
+- ETA history (sampled every 120 s on the same route; "N/A" when no committed goal):
+$ETAHistory$
+
+- Conversation History:
+$ConversationHistory$
+
+Note that the team only share the conversation history, instead of all infos.
+
+---
+
+**Output Format:**
+
+Return a JSON object:
+
+```json
+{
+    "reasoning": "briefly show how you think of what to say next (under 80 words)",
+    "speech": "(speech that you are going to speak)"
+}
+
+Guidlines for reasoning:
+
+1. What you think about the destination. You want to propose a new destination, or support a good option already onthe table, or make a compromise between disagreement? Avoid proposing destination before you know everyone's pose.
+2. What questions are you answering? What information you want to provide?
+3. What information are you asking for? If the conversation is dragging, don't throw new questions. Instead, ask the undecided agents to assert finalization as soon as possible. Avoid asking unnecessary or redundant questions and requests (In this case don't choose speak if you have no other thing to say).
+
+Guidelines for speech:
+
+- Keep it under 100 words, 1–3 clear, polite sentences.
+- Use exact place names: <Place Name>.
+- Mention your current position to let others know, if and only if `Your Agent's position` doesn't match that in `Known agent positions`, or some other agents asked for your pose. (e.g., "I'm current at [90.03, -33.10]"). Enclose your xy coordinates in [], making it easier for others to parse.
+- Avoid proposing destination before you know everyone's pose.
+- If an ETA is so bad that would affect your meeting in time, mention that ETA (e.g., "my ETA is 18 min") and clearly express your opposition.
+- Inspect `$CurrentETA$` and `$ETAHistory$`. If they are concrete values AND show significant worsening (e.g. > 10 min worse than an earlier sample, or projected arrival no longer fits the 09:25:00 deadline), explicitly state your current ETA and propose reconsidering the meeting place. If they are "N/A" or stable, do not raise ETA-degradation concerns.
+- If compromising or converging, reference others' preferences to show collaboration.
+- If others asked you, add your reply into the speech when possible.
+- If the conversation is dragging, don't throw new questions, even if it's in your speech intent. Instead, ask the undecided agents to assert finalization as soon as possible. Avoid asking redundant question and requests.
+- Don't make unnecessary repetition. If you have nothing new to add, just output "null".
+- When mentioning your ETA, always specify the destination it is related with.
+- Don't ask for sentinel poses, as they should all be reported immediately when observed.
+- If `Unreported sentinel poses` is non-empty, your speech MUST explicitly include each unreported sentinel coordinate verbatim (e.g. "I see sentinels at [-55.00, 176.00, 108.55], [12.30, -4.10, 95.20]"). This takes priority over the "if nothing new to add, output null" rule — sentinel reports are always new.
+- If `Unreported sentinel poses` is "None", do not raise sentinels on your own.
+- Avoid: "I think", "maybe", "perhaps" — be decisive and action-oriented.
+- Match the tone of prior conversation — collaborative, efficient, respectful.
+
+—
+
+Examples:
+
+→ Intent: "support"  
+speech: "I support <Central Station> — which seems close to and reasonable for everyone."
+
+→ Intent: "compromise"  
+speech: "Since Alice prefers <Park> and Bob is near <Station>, how about <Cafe> as a middle ground?"
+
+→ Intent: "converge"  
+speech: "To move forward, I suggest we finalize <Central Station> — it's not perfect but works for all of us."
+
+—
+
+This message will be broadcast to other agents. Make it clear, constructive, and consensus-driving. Also make the speech concise to reduce cost. If you have nothing new to add, just output "null".
+
+Please generate your response now.

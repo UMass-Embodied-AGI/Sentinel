@@ -1,0 +1,932 @@
+{
+    "Starbucks": {
+        "building": "One Kennedy Square",
+        "coarse_type": "food",
+        "fine_types": [
+            "cafe",
+            "store",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            46.100191593170166,
+            -46.58649730682373,
+            -4
+        ]
+    },
+    "Bohemia at The Detroit Club": {
+        "building": "The Detroit Club",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "night_club",
+            "bar",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            -217.0542984008789,
+            -222.70183563232422,
+            -4
+        ]
+    },
+    "Hotel at The Detroit Club": {
+        "building": "The Detroit Club",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "lodging",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -217.0542984008789,
+            -222.70183563232422,
+            -12
+        ]
+    },
+    "SOAK Spa at The Detroit Club": {
+        "building": "The Detroit Club",
+        "coarse_type": "stores",
+        "fine_types": [
+            "spa",
+            "beauty_salon",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -217.0542984008789,
+            -222.70183563232422,
+            -20
+        ]
+    },
+    "The Press/321": {
+        "building": "Detroit Free Press Building",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "real_estate_agency",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -222.23328399658203,
+            -173.53740692138672,
+            -4
+        ]
+    },
+    "Audio By Caruso": {
+        "building": "625 Shelby Street",
+        "coarse_type": "stores",
+        "fine_types": [
+            "electronics_store",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -38.528441429138184,
+            -244.23986053466797,
+            -4
+        ]
+    },
+    "Buhl Bar": {
+        "building": "Buhl Building",
+        "coarse_type": "food",
+        "fine_types": [
+            "bar",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            91.3976936340332,
+            -249.41004943847656,
+            -4
+        ]
+    },
+    "Buhl Building": {
+        "building": "Buhl Building",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            91.3976936340332,
+            -249.41004943847656,
+            -8
+        ]
+    },
+    "Plum Market \u2013 Ally Detroit Center": {
+        "building": "Ally Detroit Center",
+        "coarse_type": "food",
+        "fine_types": [
+            "grocery_or_supermarket",
+            "cafe",
+            "bar",
+            "store",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            257.62245178222656,
+            -176.84798431396484,
+            -4
+        ]
+    },
+    "SmartAuction": {
+        "building": "Ally Detroit Center",
+        "coarse_type": "stores",
+        "fine_types": [
+            "car_dealer",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            257.62245178222656,
+            -176.84798431396484,
+            -8
+        ]
+    },
+    "Trolley Room Detroit.": {
+        "building": "Hotel Indigo",
+        "coarse_type": "food",
+        "fine_types": [
+            "bar",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -201.8444061279297,
+            -30.642772674560547,
+            -4
+        ]
+    },
+    "Hotel Indigo Detroit Downtown, an IHG Hotel": {
+        "building": "Hotel Indigo",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "lodging",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -201.8444061279297,
+            -30.642772674560547,
+            -8
+        ]
+    },
+    "The Greening of Detroit - Lafayette Greens": {
+        "building": "open space",
+        "coarse_type": "open",
+        "fine_types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -102.55201394267924,
+            -31.724764273020703,
+            -0.0009022684871933251
+        ]
+    },
+    "The Motor Bar": {
+        "building": "The Westin Book Cadillac Detroit",
+        "coarse_type": "food",
+        "fine_types": [
+            "bar",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -176.82100677490234,
+            38.21367311477661,
+            -4
+        ]
+    },
+    "The Westin Book Cadillac Detroit": {
+        "building": "The Westin Book Cadillac Detroit",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "hotel",
+            "hotel"
+        ],
+        "location": [
+            -176.82100677490234,
+            38.21367311477661,
+            -8
+        ]
+    },
+    "GDW Fulfillment": {
+        "building": "First State Bank",
+        "coarse_type": "stores",
+        "fine_types": [
+            "store",
+            "point_of_interest",
+            "local_government_office",
+            "establishment"
+        ],
+        "location": [
+            -19.159334659576416,
+            -42.95760631561279,
+            -4
+        ]
+    },
+    "American Coney Island": {
+        "building": "114 West Lafayette Boulevard",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            -50.24174118041992,
+            -19.508010864257812,
+            -4
+        ]
+    },
+    "Lafayette Coney Island": {
+        "building": "118 West Lafayette Boulevard",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            -64.61446380615234,
+            -21.066336154937744,
+            -4
+        ]
+    },
+    "CrossFit in the D": {
+        "building": "Griswold Capitol Park",
+        "coarse_type": "entertainment",
+        "fine_types": [
+            "gym",
+            "health",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -93.47834014892578,
+            33.129998207092285,
+            -4
+        ]
+    },
+    "Griswold Capitol Park": {
+        "building": "Griswold Capitol Park",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments",
+            "parking"
+        ],
+        "location": [
+            -93.47834014892578,
+            33.129998207092285,
+            -8
+        ]
+    },
+    "BrisaBar": {
+        "building": "Brisabar",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            125.05348587036133,
+            -35.882320404052734,
+            -4
+        ]
+    },
+    "The Fountain Detroit": {
+        "building": "Campus Martius Fountain",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "bar",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            124.59207534790039,
+            -11.525463461875916,
+            -4
+        ]
+    },
+    "Parc": {
+        "building": "Parc",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            99.8667984008789,
+            -11.837553203105927,
+            -4
+        ]
+    },
+    "Roasting Plant Coffee": {
+        "building": "First National Bank Building",
+        "coarse_type": "food",
+        "fine_types": [
+            "cafe",
+            "store",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            220.88648223876953,
+            -82.07121276855469,
+            -4
+        ]
+    },
+    "Threads & Legs": {
+        "building": "First National Bank Building",
+        "coarse_type": "stores",
+        "fine_types": [
+            "clothing_store",
+            "point_of_interest",
+            "store",
+            "establishment"
+        ],
+        "location": [
+            220.88648223876953,
+            -82.07121276855469,
+            -12
+        ]
+    },
+    "Cadillac Lodge": {
+        "building": "Cadillac Tower",
+        "coarse_type": "food",
+        "fine_types": [
+            "bar",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            260.9187774658203,
+            34.38645553588867,
+            -4
+        ]
+    },
+    "Cadillac Tower": {
+        "building": "Cadillac Tower",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            260.9187774658203,
+            34.38645553588867,
+            -12
+        ]
+    },
+    "Leila": {
+        "building": "Farwell Building",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            -158.82032012939453,
+            178.38037872314453,
+            -4
+        ]
+    },
+    "XHIBITION": {
+        "building": "Farwell Building",
+        "coarse_type": "stores",
+        "fine_types": [
+            "shoe_store",
+            "clothing_store",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -158.82032012939453,
+            178.38037872314453,
+            -8
+        ]
+    },
+    "The Malcomson Building": {
+        "building": "Malcomson Building",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "real_estate_agency",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -159.06414794921875,
+            132.58945846557617,
+            -4
+        ]
+    },
+    "Eat\u00f3ri Market": {
+        "building": "Malcomson Building",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "grocery_or_supermarket",
+            "store",
+            "point_of_interest",
+            "food",
+            "establishment"
+        ],
+        "location": [
+            -159.06414794921875,
+            132.58945846557617,
+            -8
+        ]
+    },
+    "Bad Luck Bar": {
+        "building": "The Albert",
+        "coarse_type": "food",
+        "fine_types": [
+            "bar",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -67.95794296264648,
+            159.46605682373047,
+            -4
+        ]
+    },
+    "Detroit City FC Club Shop": {
+        "building": "The Albert",
+        "coarse_type": "stores",
+        "fine_types": [
+            "clothing_store",
+            "store",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -67.95794296264648,
+            159.46605682373047,
+            -8
+        ]
+    },
+    "The Albert": {
+        "building": "The Albert",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -67.95794296264648,
+            159.46605682373047,
+            -16
+        ]
+    },
+    "Avalon Caf\u00e9 and Bakery": {
+        "building": "1001 Woodward Garage",
+        "coarse_type": "food",
+        "fine_types": [
+            "cafe",
+            "bakery",
+            "store",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            13.404423713684082,
+            90.84841537475586,
+            -4
+        ]
+    },
+    "The Hudson Cafe": {
+        "building": "1241 Woodward Avenue",
+        "coarse_type": "food",
+        "fine_types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            -43.80507278442383,
+            190.85240173339844,
+            -4
+        ]
+    },
+    "Ezelli Hair Salon": {
+        "building": "One Campus Martius",
+        "coarse_type": "stores",
+        "fine_types": [
+            "beauty_salon",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            110.69419860839844,
+            128.7979393005371,
+            -4
+        ]
+    },
+    "True Market": {
+        "building": "One Campus Martius",
+        "coarse_type": "food",
+        "fine_types": [
+            "convenience_store",
+            "store",
+            "food",
+            "point_of_interest",
+            "establishment"
+        ],
+        "location": [
+            110.69419860839844,
+            128.7979393005371,
+            -8
+        ]
+    },
+    "Skillman Branch": {
+        "building": "Skillman Branch",
+        "coarse_type": "office",
+        "fine_types": [
+            "yes",
+            "library"
+        ],
+        "location": [
+            103.45899963378906,
+            254.07122039794922,
+            -4
+        ]
+    },
+    "Kresge Bldg": {
+        "building": "Kresge Bldg",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -18.697978973388672,
+            146.59722900390625,
+            -4
+        ]
+    },
+    "211 West Fort Street": {
+        "building": "211 West Fort Street",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -90.65118598937988,
+            -254.0410614013672,
+            -4
+        ]
+    },
+    "Murphy Building": {
+        "building": "Murphy Building",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            54.85810089111328,
+            -270.00465393066406,
+            -4
+        ]
+    },
+    "The Qube": {
+        "building": "The Qube",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            114.91235733032227,
+            -136.158935546875,
+            -4
+        ]
+    },
+    "Louis Kamper Apts": {
+        "building": "Louis Kamper Apts",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -195.8333969116211,
+            243.58148956298828,
+            -4
+        ]
+    },
+    "Federal Reserve Building": {
+        "building": "Federal Reserve Building",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -43.67943811416626,
+            -120.10189819335938,
+            -4
+        ]
+    },
+    "Penobscot Annex": {
+        "building": "Penobscot Annex",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            29.62147331237793,
+            -218.17445373535156,
+            -4
+        ]
+    },
+    "Capitol Park Building": {
+        "building": "Capitol Park Building",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -87.56925201416016,
+            70.60574913024902,
+            -4
+        ]
+    },
+    "Julian C. Madison Building": {
+        "building": "Julian C. Madison Building",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -196.01788330078125,
+            267.0031204223633,
+            -4
+        ]
+    },
+    "Bamlet Building": {
+        "building": "Bamlet Building",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -159.04600524902344,
+            206.5779800415039,
+            -4
+        ]
+    },
+    "Metropole Building": {
+        "building": "Metropole Building",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            197.79911041259766,
+            -95.0858268737793,
+            -4
+        ]
+    },
+    "220 West": {
+        "building": "220 West",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -52.09518814086914,
+            -264.4275588989258,
+            -4
+        ]
+    },
+    "Comerica / Detroit Trust Company": {
+        "building": "Comerica / Detroit Trust Company",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -63.44355583190918,
+            -219.96089935302734,
+            -4
+        ]
+    },
+    "U.S. Mortgage Bond Building": {
+        "building": "U.S. Mortgage Bond Building",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -27.714714527130127,
+            -262.63545989990234,
+            -4
+        ]
+    },
+    "Chancery Bldg": {
+        "building": "Chancery Bldg",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -195.4245376586914,
+            150.63526916503906,
+            -4
+        ]
+    },
+    "Spkr Box": {
+        "building": "Spkr Box",
+        "coarse_type": "food",
+        "fine_types": [
+            "yes",
+            "cafe"
+        ],
+        "location": [
+            -148.91122436523438,
+            242.951416015625,
+            -4
+        ]
+    },
+    "Security Trust Lofts": {
+        "building": "Security Trust Lofts",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -9.234644174575806,
+            -59.16574668884277,
+            -4
+        ]
+    },
+    "Fowler Building": {
+        "building": "Fowler Building",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -35.80226707458496,
+            176.8706283569336,
+            -4
+        ]
+    },
+    "Traver Bldg": {
+        "building": "Traver Bldg",
+        "coarse_type": "office",
+        "fine_types": [
+            "office"
+        ],
+        "location": [
+            -27.750070571899414,
+            162.34339904785156,
+            -4
+        ]
+    },
+    "Bedell Bldg": {
+        "building": "Bedell Bldg",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -54.39998245239258,
+            206.29248046875,
+            -4
+        ]
+    },
+    "45 W Grand River": {
+        "building": "45 W Grand River",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -111.99979400634766,
+            216.29522705078125,
+            -4
+        ]
+    },
+    "28 Grand": {
+        "building": "28 Grand",
+        "coarse_type": "accommodation",
+        "fine_types": [
+            "apartments"
+        ],
+        "location": [
+            -120.80001068115234,
+            261.3353271484375,
+            -4
+        ]
+    },
+    "Cadillac Square Bus Stop": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bus stop",
+        "location": [
+            161.4483028206114,
+            -22.808013611521325
+        ],
+        "scene": null
+    },
+    "Shelby Street Bus Stop": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bus stop",
+        "location": [
+            -86.86399316235591,
+            -115.57112890928369
+        ],
+        "scene": null
+    },
+    "Washington Boulevard Bus Stop": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bus stop",
+        "location": [
+            -227.14865352914424,
+            215.1107975807429
+        ],
+        "scene": null
+    },
+    "Bicycle Sharing Station 1": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bicycle station",
+        "location": [
+            84.45736775052188,
+            171.781173660121
+        ],
+        "scene": null
+    },
+    "Bicycle Sharing Station 2": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bicycle station",
+        "location": [
+            -108.023841044584,
+            -11.773207132607133
+        ],
+        "scene": null
+    },
+    "Bicycle Sharing Station 3": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bicycle station",
+        "location": [
+            -235.7681507700008,
+            -220.24129204678292
+        ],
+        "scene": null
+    },
+    "Bicycle Sharing Station 4": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bicycle station",
+        "location": [
+            -24.2629832013028,
+            189.9705379110076
+        ],
+        "scene": null
+    },
+    "Bicycle Sharing Station 5": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bicycle station",
+        "location": [
+            -9.397046064414717,
+            -234.05763460544557
+        ],
+        "scene": null
+    },
+    "Bicycle Sharing Station 6": {
+        "building": "open space",
+        "coarse_type": "transit",
+        "fine_type": "bicycle station",
+        "location": [
+            -165.8144108188955,
+            215.07522290123595
+        ],
+        "scene": null
+    }
+}

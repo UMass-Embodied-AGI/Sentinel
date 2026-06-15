@@ -1,0 +1,976 @@
+{
+    "agent_names": [
+        "Sentinel 0",
+        "Sentinel 1",
+        "Sentinel 2",
+        "Sentinel 3",
+        "Sentinel 4",
+        "Sentinel 5",
+        "Sentinel 6",
+        "Sentinel 7",
+        "Sentinel 8",
+        "Sentinel 9",
+        "Sentinel 10",
+        "Sentinel 11",
+        "Sentinel 12",
+        "Sentinel 13",
+        "Sentinel 14",
+        "Sentinel 15",
+        "Sentinel 16",
+        "Sentinel 17",
+        "Sentinel 18",
+        "Sentinel 19"
+    ],
+    "agent_infos": [
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -117.80588020770863,
+                94.79353803119747,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -110.1861115109781,
+                149.57229774281154,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -157.12980546706987,
+                148.97508392115878,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -115.50025781045825,
+                103.04650428779397,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -141.1870055849643,
+                173.37634276791687,
+                116.02034192654753,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                106.68356528799683,
+                207.43763175120478,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                236.97747069313766,
+                168.59685755163378,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                190.09922992918837,
+                -112.39095861991879,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -3.552671085642885,
+                -267.67834389984336,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -266.92673673139086,
+                -147.9659896304386,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -109.76934985437515,
+                140.43204851633448,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -162.64352697826232,
+                -100.92543261413263,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -152.1703123643997,
+                -217.38569804249448,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -219.74903171615955,
+                44.77678480948799,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                236.2869156224341,
+                182.42476511629366,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -178.5175100321129,
+                -153.0953536708154,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                189.64784139107763,
+                282.8585225633352,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                135.8336130976311,
+                229.04459909823026,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -108.35661576858635,
+                -54.94630574970867,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        },
+        {
+            "cash": 1000,
+            "held_objects": [
+                null,
+                null
+            ],
+            "outdoor_pose": [
+                -130.48839419159196,
+                -244.47096601970242,
+                118.38985153999431,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "current_building": "open space",
+            "current_place": null,
+            "current_vehicle": null
+        }
+    ],
+    "agent_poses": [
+        [
+            -117.80588020770863,
+            94.79353803119747,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -110.1861115109781,
+            149.57229774281154,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -157.12980546706987,
+            148.97508392115878,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -115.50025781045825,
+            103.04650428779397,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -141.1870055849643,
+            173.37634276791687,
+            116.02034192654753,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            106.68356528799683,
+            207.43763175120478,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            236.97747069313766,
+            168.59685755163378,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            190.09922992918837,
+            -112.39095861991879,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -3.552671085642885,
+            -267.67834389984336,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -266.92673673139086,
+            -147.9659896304386,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -109.76934985437515,
+            140.43204851633448,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -162.64352697826232,
+            -100.92543261413263,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -152.1703123643997,
+            -217.38569804249448,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -219.74903171615955,
+            44.77678480948799,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            236.2869156224341,
+            182.42476511629366,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -178.5175100321129,
+            -153.0953536708154,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            189.64784139107763,
+            282.8585225633352,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            135.8336130976311,
+            229.04459909823026,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -108.35661576858635,
+            -54.94630574970867,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            -130.48839419159196,
+            -244.47096601970242,
+            118.38985153999431,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "locator_colors": [
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan",
+        "cyan"
+    ],
+    "locator_colors_rgb": [
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "agent_skins": [
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb",
+        "avatars/models/mixamo_sentinel.glb"
+    ],
+    "patrol_config": [
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -117.80588020770863,
+                    94.79353803119747
+                ],
+                [
+                    -179.34857886771005,
+                    146.78171788112994
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -110.1861115109781,
+                    149.57229774281154
+                ],
+                [
+                    -165.63512700610534,
+                    82.79824558757454
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -157.12980546706987,
+                    148.97508392115878
+                ],
+                [
+                    -148.9417974253489,
+                    103.55727891208727
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -115.50025781045825,
+                    103.04650428779397
+                ],
+                [
+                    -141.61767906868076,
+                    141.42317135416437
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -141.1870055849643,
+                    173.37634276791687
+                ],
+                [
+                    -109.99821348027804,
+                    166.98048268336933
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    106.68356528799683,
+                    207.43763175120478
+                ],
+                [
+                    77.24522160226837,
+                    215.21336646454586
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    236.97747069313766,
+                    168.59685755163378
+                ],
+                [
+                    246.5480594733151,
+                    112.65291077883018
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    190.09922992918837,
+                    -112.39095861991879
+                ],
+                [
+                    241.9844581991299,
+                    -37.96012252810476
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -3.552671085642885,
+                    -267.67834389984336
+                ],
+                [
+                    94.2026956331224,
+                    -213.78368918044603
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -266.92673673139086,
+                    -147.9659896304386
+                ],
+                [
+                    -192.59702905471494,
+                    -187.30482705157755
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -109.76934985437515,
+                    140.43204851633448
+                ],
+                [
+                    -81.42900746671779,
+                    105.78258543819186
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -162.64352697826232,
+                    -100.92543261413263
+                ],
+                [
+                    -81.13214117863293,
+                    -51.31402132212156
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -152.1703123643997,
+                    -217.38569804249448
+                ],
+                [
+                    -193.85630336617464,
+                    -121.46664419538789
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -219.74903171615955,
+                    44.77678480948799
+                ],
+                [
+                    -133.75517555975895,
+                    114.50665560731164
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    236.2869156224341,
+                    182.42476511629366
+                ],
+                [
+                    297.5820182498013,
+                    197.67898197038392
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -178.5175100321129,
+                    -153.0953536708154
+                ],
+                [
+                    -173.8103564493103,
+                    -72.70393366052011
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    189.64784139107763,
+                    282.8585225633352
+                ],
+                [
+                    126.3407743458356,
+                    212.85266304608547
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    135.8336130976311,
+                    229.04459909823026
+                ],
+                [
+                    181.25423251110584,
+                    252.23611800108142
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -108.35661576858635,
+                    -54.94630574970867
+                ],
+                [
+                    -145.99674049159844,
+                    -33.04814265901189
+                ]
+            ],
+            "route_index": 0
+        },
+        {
+            "type": "patrolling",
+            "route": [
+                [
+                    -130.48839419159196,
+                    -244.47096601970242
+                ],
+                [
+                    -153.0287433083998,
+                    -236.526246080705
+                ]
+            ],
+            "route_index": 0
+        }
+    ]
+}

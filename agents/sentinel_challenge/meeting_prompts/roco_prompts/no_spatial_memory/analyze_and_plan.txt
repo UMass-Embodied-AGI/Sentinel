@@ -1,0 +1,119 @@
+$TaskDescription$
+
+Now the agent is in a group discussion.
+
+Your task has two steps: 
+1. Analyze what informations (i.e. specific travel time or place data) are **missing or uncertain** for this agent and need to query about — based on conversation history, other agents’ opinions, and available known data.
+2. Help the agent decide its next move in the discussion: Should it **speak**, **query for more information**, or **wait**? $Stalling$
+
+---
+
+**Input:**
+
+Current Time:
+$CurrentTime$
+
+- Agent’s Name: $SelfName$
+
+- Agent's position: $SelfPose$
+
+- Current Agent Opinions: 
+$AgentOpinions$
+
+- Available Places:
+$Places$
+
+- Conversation History:
+$ConversationHistory$
+
+- Extracted ETA Map (contains agents' computed ETAs to specific places known by this agent):
+$KnownETA$
+
+Note that the team only share the conversation history, instead of all infos.
+
+---
+
+**Output Format:**
+
+Return a JSON object:
+
+```json
+{
+    "missing info": [
+        "brief explanation (under 20 words)",
+        "brief explanation (under 20 words)",
+        ...
+    ],
+    "action": "speak|query|wait",
+    "explanation": "brief explanation why you choose this action (under 80 words)"
+}
+
+```
+
+Guidelines for analyzing missing info:
+
+Places mentioned in missing info must be a exact place name from $Places, each enclosed in <>.
+- Include a place if:
+  - The agent hasn’t queried it yet.
+  - It’s being seriously considered (e.g., mentioned by others, optimal, or a compromise candidate).
+  - The agent need someone's ETA to that location to make further consideration.
+- Don't include information already known in "Known agent positions" and "Known ETAs". Examine 'KnownETA' carefully. This is very important! For example, if you know your eta to <Place> in "Known ETAs" and someone is asking for that, don't include it in the missing info!.
+- Limit to at most 3 infos — prioritize the most critical for breaking ties or resolving uncertainty.
+
+Guidelines for Choosing Action:
+You must choose from three types of actions: "speak" with teammates, "query" the map tool, or just "wait".
+
+“speak” — if:
+
+The agent has enough info to propose, support, or compromise.
+Discussion is stalling or repeating. You want to finalize the discussion.
+There’s a clear optimal or majority-preferred location to endorse.
+You need information about other agents.
+Someone is asking for your information and you already have that information.
+No one respond you or speak anything during the last 5s, in which case you should say again.
+In short, if you need to speak something, choose 'speak'. If so, set the 'explanation' to your speech intent. The intent should at least include one of the following three fields:
+1. What you think about the destination. You want to propose a new destination, or support a good option already onthe table, or make a compromise between disagreement?
+2. What questions are you answering? What information you want to provide?
+3. What information are you asking for? If the conversation is dragging, don't throw new questions. Instead, ask the undecided agents to assert finalization as soon as possible. Avoid asking unnecessary or redundant questions and requests (In this case don't choose speak if you have no other thing to say).
+
+“query” — if:
+
+The agent lacks its own ETA to one or more leading locations, so it will query the map tool for this.
+Someone is asking for your information and you don't have that information.
+Some unknown places are mentioned, so you need to query the map tool for this.
+You want more information about a specific area.
+In short, if you need to query the map tool for something, choose 'query'. If so, set the 'explanation' to what you want to query about.
+
+“wait” — if:
+
+Other agents are actively speaking or querying.
+The agent has nothing new to add yet.
+Recent messages suggest convergence is imminent.
+
+For example, if you need someone's ETA but haven't ask for it, go for "speak". If someone else have asked for that ETA, then "wait". If one agent did not response for a while, consider the probability of it being caught, in which case you should exclude it from consideration. When speaking, try your best to avoid repetition. If one question have asked multiple times, please don't waste time asking again.
+
+
+—
+
+Example:
+```json
+{
+    "missing info": [
+        "<agent> asked for my ETA to <West Lake>, and I don't know it in Known ETAs.",
+        "Need Bob's ETA to <Downtown Plaza> to compare top 2 candidates",
+        "Need my ETA to <Central Park> to compare with Alice’s suggestion",
+        ...
+    ],
+    "action": "query",
+    "explanation": "I should prioritize querying my ETA to <West Lake>, because someone asked me for that, so that I can answer him later."
+}
+
+```
+
+# In this example, "Bob's ETA to <Downtown Plaza>", "my ETA to <Central Park>", and "my ETA to <West Lake>" are not in Known ETAs.
+
+—
+
+Be specific and efficient. Avoid querying irrelevant or already-covered question. Prioritize places that could unblock consensus or reveal a clear optimal choice. Be decisive and efficient. Prioritize progress over perfection. Prioritize answering questions over throwing questions. If more than 25 seconds have passed without convergence, lean to drive consensus. Last but not the least, avoid redundant proposals, speeches or finalization if possible.
+
+Please generate your response now.

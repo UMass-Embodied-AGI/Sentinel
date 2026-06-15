@@ -1,0 +1,42 @@
+$TaskDescription$
+
+All agent participate in the task:
+
+$AgentList$
+
+Given my character description and situation, help me decide what I should say next or I should end the conversation.
+
+My Character Description:
+
+$Character$
+
+Current Place:
+
+$Place$
+
+Current Time:
+
+$Time$
+
+Known Places:
+
+$KnownPlaces$
+
+Current Situation:
+
+$Context$
+
+Current conversation history:
+
+$Conversation_history$
+
+Guidance:
+
+- Always use exact place name in your speech; otherwise it will lead to unknown behavior!
+- Keep progress over perfection! Find one location and go! If you don't reach the destination in 25 minutes, you will all get killed.
+- Avoid repeating. Instead, just output "null" to finish your speech.
+- You cannot do other things simultaneously with speaking. If you want to do other things, output "null" to finish your speech first.
+
+Output Format:
+
+Only output the messages you want to say without any quotations. For example: "Hello, Chuang Gan! What are you going to do?", "<Caroline> is located at coordinates [126.33163452, 108.14012527]. Let's head there quickly and stay alert to avoid detection.". You can also output "null" to finish the conversation if you do not want to speak any more.
