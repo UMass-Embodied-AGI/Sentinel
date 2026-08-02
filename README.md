@@ -74,6 +74,22 @@ bash sentinel_challenge/no_gt_scripts/run_cosar.sh DETROIT 3 stationary 1 0
 ```
 
 
+## Responsible Use and Ethical Considerations
+
+Sentinel is intended to support research on cooperative embodied intelligence in safety-relevant scenarios, including search-and-rescue, disaster response, and autonomous logistics. It provides a standardized, controlled environment for studying multi-agent planning, communication, and reasoning under partial observability and dynamic risk.
+
+The benchmark is entirely simulation-based and contains only synthetic agents and environments. It does not use or release real-world human data, biometric information, or personally identifiable information. Accordingly, the primary ethical concern is not the benchmark data itself, but the possible transfer of cooperative navigation and reasoning methods to harmful real-world applications.
+
+These capabilities are inherently dual-use. In particular, the following applications are outside the intended scope of this project:
+
+- Mass surveillance
+- Biometric identification
+- Predictive policing
+- Tracking or monitoring identifiable individuals without appropriate authorization
+
+We ask users to apply Sentinel only for lawful, authorized, and ethically reviewed purposes, with safeguards appropriate to their deployment context. Concerns about misuse, documentation, or other responsible-use issues can be reported through the repository's [issue tracker](https://github.com/UMass-Embodied-AGI/Sentinel/issues). We will maintain this guidance through versioned updates as the benchmark and its uses evolve.
+
+
 ## Citation
 
 If you find our work useful, please consider citing:
