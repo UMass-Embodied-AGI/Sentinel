@@ -69,7 +69,11 @@ summary{cursor:pointer;font-weight:650}
 .hero.overview{padding-block:clamp(1.5rem,4vw,4rem)}
 #benchmark{padding-top:clamp(1.5rem,3vw,3rem)}
 .overview h1 span{display:block;margin:.35em 0 .7em;color:var(--lime);font-size:clamp(1.8rem,3.5vw,3.5rem);line-height:1.1;letter-spacing:-.035em;text-wrap:balance}
-.hero.episode{background:#e4edda;color:var(--ink)}
+.episode{background:#e4edda;color:var(--ink)}
+.replay-intro{margin-top:1rem}
+#replay figure{align-self:start}
+#replay video{display:block;width:100%;height:auto;background:var(--night)}
+#replay figcaption{flex-wrap:wrap}
 .episode .label,.episode .radio small{color:var(--green)}
 .episode h2{margin-bottom:.4em}
 .episode-decision{margin-top:.9rem}
