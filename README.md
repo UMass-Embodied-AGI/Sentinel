@@ -1,6 +1,6 @@
 # Sentinel: Embodied Cooperative Spatial Reasoning and Planning
 
-![Teaser](teaser.png)
+![Teaser](docs/teaser.png)
 
 This repo contains code for the following paper:
 
@@ -8,7 +8,7 @@ _Xiangye Lin\*, Hongxin Zhang\*, Ruxi Deng, Qinhong Zhou, Chuang Gan_: Sentinel:
 
 Paper: [https://arxiv.org/pdf/2605.26239](https://arxiv.org/pdf/2605.26239)
 
-Project Website: _coming soon_
+Project website: [site source](docs/index.html) (open `docs/index.html` locally to preview).
 
 We introduce the **Sentinel Challenge**, a benchmark for studying _Cooperative Spatial Intelligence_, in which multiple decentralized embodied agents must communicate in natural language to agree on a mutually safe and convenient meeting point in city-scale outdoor environments, then navigate there while avoiding dynamic sentinels patrolling the scene with only a coarse map tool for spatial guidance. To address this problem, we propose **CoSaR**, a cooperative spatial reasoning and planning framework that bridges the communication and planning strengths of foundation models with classical spatial navigation algorithms. CoSaR maintains a dynamic spatial memory of poses, ETAs, occupancy, and sentinel danger zones, and uses a spatial-aware reasoning module to decide when to communicate, query the map tool, navigate, or wait. Across 14 city-scale scenes with 3–5 agents, CoSaR consistently achieves faster gathering, shorter path lengths, and improved safety over strong baselines.
 

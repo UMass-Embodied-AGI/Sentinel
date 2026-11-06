@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Sentinel Challenge tests whether embodied agents can agree on a safe meeting place and reach it together in a simulated city.">
+  <title>Sentinel · Embodied Cooperative Spatial Reasoning and Planning</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#benchmark">Skip to the benchmark introduction</a>
+<header><a class="brand" href="#top">⌖ Sentinel</a><nav aria-label="Page sections"><a href="#benchmark">Benchmark</a><a href="#results">Results</a><a href="#run">Run it</a><a href="#paper">Cite</a></nav></header>
+<main id="top">
+<section class="hero overview" aria-labelledby="title">
+  <div><h1 id="title">Sentinel: <span>a benchmark for cooperative spatial intelligence.</span></h1>
+  <div class="actions"><a href="#benchmark">Explore the benchmark ↓</a><a href="https://arxiv.org/pdf/2605.26239">Paper ↗</a><a href="https://github.com/UMass-Embodied-AGI/Sentinel">Code ↗</a></div></div>
+  <figure><a href="teaser.png"><img src="media/teaser.webp" width="1600" height="907" alt="Open the full figure showing agents coordinating routes to a shared meeting point."></a></figure>
+</section>
+<section class="spread" id="benchmark" aria-labelledby="intro-title">
+  <div><div class="label">The task</div><h2 id="intro-title">Meeting in the city</h2></div>
+  <div><p class="lead">The agents start in different places and must decide where to meet. Each sees only its own surroundings, so teammates exchange messages to choose a place everyone can reach. The team succeeds only if all agents arrive without being caught by a sentinel.</p>
+  <div class="rules reference">
+    <details><summary>What is the environment?</summary>
+      <ul>
+        <li><strong>Scenes:</strong> 24 reconstructions of urban neighborhoods in the Virtual Community simulator, each about 800 × 800 m.</li>
+        <li><strong>Places</strong> are predefined locations in the city where agents can meet. Each scene contains 50–150 places. Agents start indoors and initially know only some of them.</li>
+        <li><strong>Map tool:</strong> A static map built in advance for each city. Agents can look up places and request routes along the road network. The map does not track sentinels.</li>
+        <li><strong>Configuration:</strong> Up to 15 agents and 20 sentinels per scene.</li>
+      </ul>
+    </details>
+    <details><summary>What are sentinels?</summary>
+      <p>Sentinels are simulated lookouts. They can detect agents outdoors, but not inside buildings.</p>
+      <ul>
+        <li><strong>Movement:</strong> Stationary sentinels rotate in place. Patrolling sentinels follow predefined routes.</li>
+        <li><strong>Detection:</strong> When a sentinel spots an agent, it issues a warning and starts a countdown. The closer the agent is, the faster the countdown runs.</li>
+        <li><strong>Escape or capture:</strong> Leaving the sentinel’s field of view resets the countdown. If it reaches zero, the agent is caught and the team cannot succeed.</li>
+      </ul>
+    </details>
+    <details><summary>What does an agent observe?</summary>
+      <ul>
+        <li><strong>First-person view:</strong> RGB-D image · 512 × 512 px resolution · 90° field of view (FOV).</li>
+        <li><strong>Team messages:</strong> Reports and proposals from other agents.</li>
+        <li><strong>Map results:</strong> Place information, waypoint routes, or a coarse overhead map, depending on the query.</li>
+      </ul>
+    </details>
+    <details><summary>What can an agent do?</summary>
+      <ul>
+        <li><strong>Navigate:</strong> Follow a route or change course to avoid a sentinel.</li>
+        <li><strong>Communicate:</strong> Send teammates a message, such as a warning or a proposed meeting place.</li>
+        <li><strong>Query the map:</strong> Look up a place or request a route.</li>
+        <li><strong>Signal completion:</strong> Report arrival at the meeting place.</li>
+      </ul>
+    </details>
+    <details><summary>How is a run scored?</summary>
+      <p><strong>Success rate:</strong> the fraction of runs in which all agents reach the same place uncaught within 1,500 steps.</p>
+      <ul>
+        <li><strong>Caught rate:</strong> fraction of agents captured.</li>
+        <li><strong>Detected rate:</strong> fraction of steps when a sentinel detects at least one agent.</li>
+        <li><strong>Time:</strong> steps until the team gathers.</li>
+        <li><strong>Distance:</strong> sum of the distances traveled by all agents.</li>
+      </ul>
+    </details>
+  </div>
+  <a href="#case">See how one team made that choice ↓</a></div>
+</section>
+<section class="hero episode" id="case" aria-labelledby="episode-title">
+  <div><div class="label">Inside an episode · CoSaR agents</div>
+  <h2 id="episode-title">Why the team changed its meeting point</h2>
+  <p class="deck">The team had agreed to meet at a bus stop. When Steve’s estimated travel time rose from four minutes to nine, he asked the others to consider another location.</p>
+  <p class="episode-decision">Megan suggested a bike station near her and asked how long it would take the others to get there. Allen was nearly eight minutes away. After comparing his estimate with Megan’s and Steve’s, he recommended switching to the bike station.</p>
+  <details class="radio"><summary>Compare the agents’ estimates</summary>
+    <p>Steve’s estimate to the bus stop rose from 4:09 to 9:04. For the proposed bike station, Megan estimated 3:42, Allen 7:52, and Steve 8:30.</p>
+    <small>Travel times are estimates, not recorded arrivals. <a href="https://arxiv.org/pdf/2605.26239#page=14">Original exchange · Figure 6 ↗</a></small>
+  </details></div>
+  <figure class="city"><a href="teaser.png" aria-label="Open the complete benchmark overview"><img src="media/route.webp" width="800" height="620" alt="Colored routes converge on a starred meeting place amid sentinel fields of view."></a><figcaption><span>Benchmark overview, not an episode trace.</span><a href="teaser.png">Full figure ↗</a></figcaption></figure>
+  <!-- Episode replay slot: insert a captioned video here when the recording is ready. -->
+</section>
+<section class="spread" id="results" aria-labelledby="results-title">
+  <div><div class="label">Evaluation</div><h2 id="results-title">Benchmark results</h2></div>
+  <div>
+    <p class="lead">Five agents, ten sentinels. A run counts as a success only when all five agents reach the meeting place uncaught.</p>
+    <table>
+      <caption>Team success rate (%) · standard perception · 14 scenes, six runs per scene</caption>
+      <thead><tr><th scope="col">Method</th><th scope="col">Stationary sentinels</th><th scope="col">Patrolling sentinels</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Oracle Centered</th><td>7.14</td><td>14.29</td></tr>
+        <tr><th scope="row">Oracle Centered + danger zones</th><td>11.90</td><td>29.76</td></tr>
+        <tr><th scope="row">MCTS</th><td>10.71</td><td>15.48</td></tr>
+        <tr><th scope="row">RoCo</th><td>26.19</td><td>29.76</td></tr>
+        <tr><th scope="row">CoELA</th><td>16.67</td><td>26.19</td></tr>
+        <tr><th scope="row">MAT</th><td>0.00</td><td>7.14</td></tr>
+        <tr><th scope="row">CoSaR (ours)</th><td><strong>32.14</strong></td><td><strong>32.14</strong></td></tr>
+      </tbody>
+    </table>
+    <p><strong>CoSaR achieved the highest team success rate in both settings.</strong> A lower capture rate did not guarantee a higher team success rate. With patrolling sentinels, fewer CoELA agents were caught than CoSaR agents (18% vs. 28%), but fewer CoELA teams finished (26% vs. 32%).</p>
+    <a href="https://arxiv.org/pdf/2605.26239#page=12">Table 1: all five metrics and oracle-perception results ↗</a>
+  </div>
+</section>
+<section class="spread" id="run"><div><div class="label">Use the benchmark</div><h2>Run an episode in Detroit.</h2></div>
+<div><p class="lead">This example runs CoSaR with three agents, one stationary sentinel, and ground-truth segmentation.</p>
+<p><strong>Before you start:</strong> The supplied runner uses a GPU, calls GPT-4o through Azure, and enables indoor scenes. Configure Azure GPT-4o access and follow the <a href="https://github.com/UMass-Embodied-AGI/Sentinel#assets">indoor asset instructions</a> before running it.</p>
+<p><a href="https://github.com/UMass-Embodied-AGI/Sentinel#installation">Install the simulator</a>, activate its environment, then run the command from the repository root:</p>
+<pre class="command"><code>bash sentinel_challenge/gt_scripts/run_cosar.sh DETROIT 3 stationary 1 0</code></pre>
+<a href="https://github.com/UMass-Embodied-AGI/Sentinel#run-experiments">Code and experiment guide ↗</a> · <a href="https://huggingface.co/datasets/Virtual-Community-AI/assets">Scene assets ↗</a></div></section>
+<section class="field reference" id="paper"><div class="label">Research reference</div><h2>Paper and citation</h2>
+<p><a href="https://arxiv.org/pdf/2605.26239"><cite>Sentinel: Embodied Cooperative Spatial Reasoning and Planning</cite></a><br>Xiangye Lin*, Hongxin Zhang*, Ruxi Deng, Qinhong Zhou, Chuang Gan<br><small>* Equal contribution</small></p>
+<details><summary>About CoSaR</summary><p>CoSaR is the method introduced alongside the benchmark. Each agent maintains a spatial memory of hazards, teammates’ locations, and estimated travel times. It updates that memory from observations and messages, then decides whether to communicate, query the map, navigate, or wait.</p></details>
+<details id="citation"><summary>Cite this paper (BibTeX)</summary>
+<pre><code>@misc{lin2026sentinel,
+  title = {Sentinel: Embodied Cooperative Spatial Reasoning and Planning},
+  author = {Lin, Xiangye and Zhang, Hongxin and Deng, Ruxi and Zhou, Qinhong and Gan, Chuang},
+  year = {2026},
+  eprint = {2605.26239},
+  archivePrefix = {arXiv}
+}</code></pre></details></section>
+</main><footer><span>Sentinel / 2026</span><a href="https://github.com/UMass-Embodied-AGI/Sentinel#responsible-use-and-ethical-considerations">Responsible use ↗</a></footer>
+</body></html>
