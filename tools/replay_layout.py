@@ -5,6 +5,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
 SIZE = (1600, 900)
 INK, GREEN, PAPER = "#112d25", "#234439", "#f5f4e9"
 LIME, MUTED, WHITE = "#d9ee86", "#b5cbbd", "#f8f8ee"
@@ -14,10 +16,10 @@ CAPTION_WIDTH, CAPTION_LINES = 731, 5
 @lru_cache(maxsize=32)
 def font(size, bold=False):
     style = "Bold" if bold else "Regular"
-    for path in (f"vico/tools/misc/OpenSans-{style}.ttf",
+    for path in (REPO_ROOT / f"vico/tools/misc/OpenSans-{style}.ttf",
                  f"DejaVuSans{'-Bold' if bold else ''}.ttf",
                  f"/System/Library/Fonts/Supplemental/Arial{' Bold' if bold else ''}.ttf",
-                 "vico/tools/misc/OpenSans-Regular.ttf"):
+                 REPO_ROOT / "vico/tools/misc/OpenSans-Regular.ttf"):
         try:
             return ImageFont.truetype(path, size)
         except OSError:

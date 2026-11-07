@@ -90,6 +90,30 @@ These capabilities are inherently dual-use. In particular, the following applica
 We ask users to apply Sentinel only for lawful, authorized, and ethically reviewed purposes, with safeguards appropriate to their deployment context. Concerns about misuse, documentation, or other responsible-use issues can be reported through the repository's [issue tracker](https://github.com/UMass-Embodied-AGI/Sentinel/issues). We will maintain this guidance through versioned updates as the benchmark and its uses evolve.
 
 
+## Generate a Replay Video
+
+Replay rendering uses saved episode records and camera images; it requires CPU resources, not a GPU. On Unity, run rendering inside a Slurm allocation. From the activated environment:
+
+```bash
+python tools/make_video_demo.py \
+  --data_dir /path/to/AUSTIN/sentinel_gt_5/patrol_5/job_1 \
+  --scene AUSTIN \
+  --scene_assets_dir /path/to/private/scenes/AUSTIN \
+  --demo_dir output/austin_replay \
+  --cam_type ego --videowriter ffmpeg --threads 4
+```
+
+`--scene_assets_dir` must contain `global.png` and `global_cam_parameters.json`; it defaults to this repository's `assets/scenes/<SCENE>/`. This allows rendering unpublished scenes without copying their assets into the release. `--demo_dir` receives frames and `demo.mp4`; by default these go under the episode's `demo/district_ego_full/`. Existing frames are reused unless `--overwrite` is given; use a new output directory or `--overwrite` after changing layout or inputs.
+
+`--scene` overrides inference from benchmark and legacy episode paths, including names such as `EL_PASO`. Add `--steps 10` for a short preview or `--no_output_video` for frames only. The FFmpeg writer requires `ffmpeg` on `PATH`.
+
+Run the lightweight replay regression checks with:
+
+```bash
+python -m unittest discover -s tests -p 'test_video_demo.py'
+```
+
+
 ## Citation
 
 If you find our work useful, please consider citing:
