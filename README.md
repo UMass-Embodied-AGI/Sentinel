@@ -103,14 +103,20 @@ python tools/make_video_demo.py \
   --cam_type ego --videowriter ffmpeg --threads 4
 ```
 
-`--scene_assets_dir` must contain `global.png` and `global_cam_parameters.json`; it defaults to this repository's `assets/scenes/<SCENE>/`. This allows rendering unpublished scenes without copying their assets into the release. `--demo_dir` receives frames and `demo.mp4`; by default these go under the episode's `demo/district_ego_full/`. Existing frames are reused unless `--overwrite` is given; use a new output directory or `--overwrite` after changing layout or inputs.
+`--scene_assets_dir` must contain `global.png` and `global_cam_parameters.json`; it defaults to this repository's `assets/scenes/<SCENE>/`. This allows rendering unpublished scenes without copying their assets into the release. `--demo_dir` receives frames and `demo.mp4`; by default these go under the episode's `demo/district_ego_full/`. Frames are reused only when their cache metadata matches the render settings, layout code, map, captions, positions, and camera files. Camera files are checked by path, size, and modification time. Old outputs without cache metadata are regenerated. Use `--overwrite` to force a render, including after input changes that preserve file size and timestamps.
 
-`--scene` overrides inference from benchmark and legacy episode paths, including names such as `EL_PASO`. Add `--steps 10` for a short preview or `--no_output_video` for frames only. The FFmpeg writer requires `ffmpeg` on `PATH`.
+`--scene` overrides inference from benchmark and legacy episode paths, including names such as `EL_PASO`. Add `--steps 10` for a short preview or `--no_output_video` for frames only. The FFmpeg writer uses `ffmpeg` from `PATH`, falling back to the binary bundled with `imageio-ffmpeg`. Both writers honor `--codec` and `--threads`, and round each shot duration to at least one frame at 24 fps. Timed PNG entries avoid repeatedly decoding the same image during dialogue pauses.
 
 Run the lightweight replay regression checks with:
 
 ```bash
 python -m unittest discover -s tests -p 'test_video_demo.py'
+```
+
+Inside a CPU allocation, also exercise both codecs and writers with real encoding and decoding:
+
+```bash
+RUN_VIDEO_ENCODING_TESTS=1 python -m unittest discover -s tests -p 'test_video*.py'
 ```
 
 

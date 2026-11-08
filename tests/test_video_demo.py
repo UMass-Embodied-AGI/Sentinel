@@ -3,11 +3,15 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import subprocess
+
+from PIL import Image
 import unittest
 from unittest.mock import patch
 
 from tools.make_video_demo import (
-    EpisodeStep, build_parser, infer_scene, main, read_step, resolve_paths, timeline,
+    EpisodeStep, RenderContext, build_parser, frame_counts, images_to_video_using_ffmpeg,
+    infer_scene, main, process_frame, read_step, resolve_paths, save_frame, timeline,
 )
 
 
@@ -70,6 +74,88 @@ class ReplayTests(unittest.TestCase):
                     main([option, '0'])
                 self.assertEqual(error.exception.code, 2)
                 load.assert_not_called()
+
+
+class EncodingValidationTests(unittest.TestCase):
+    def test_duration_quantization(self):
+        self.assertEqual(frame_counts([('a', 0.1), ('b', 0.2), ('c', 0.001)]), [2, 5, 1])
+
+    def test_invalid_durations(self):
+        for duration in [0, -1, float('nan'), float('inf')]:
+            with self.subTest(duration=duration), self.assertRaises(ValueError):
+                frame_counts([('a', duration)])
+        with self.assertRaises(ValueError):
+            frame_counts([])
+
+    def test_failed_encoding_cleans_up_manifest(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            with patch('tools.make_video_demo.find_ffmpeg', return_value='ffmpeg'), \
+                    patch('tools.make_video_demo.subprocess.run', side_effect=subprocess.CalledProcessError(1, 'ffmpeg')):
+                with self.assertRaises(subprocess.CalledProcessError):
+                    images_to_video_using_ffmpeg([('frame.png', 0.1)], root/'demo.mp4')
+            self.assertEqual(list(root.glob('*.ffconcat')), [])
+
+
+class FrameCacheTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name)
+        camera = self.root/'ego/Alice/rgb_000000.png'
+        camera.parent.mkdir(parents=True)
+        Image.new('RGB', (16, 16), 'red').save(camera)
+        self.camera = camera
+        self.context = RenderContext(
+            self.root, self.root, 'AUSTIN', 'ego', 5, False, ['Alice'], [],
+            {'Alice': (255, 0, 0)}, Image.new('RGB', (16, 16)), (0, 0, 16, 16),
+            [EpisodeStep({'Alice': (8, 8)}, [], 'noon')], 'layout-v1')
+        self.renderer = patch('tools.make_video_demo.render_frame',
+                              side_effect=lambda **kwargs: Image.new('RGB', (16, 16), 'blue')).start()
+        self.addCleanup(patch.stopall)
+
+    def render(self):
+        return process_frame((0, 'Alice'), self.context)
+
+    def test_unchanged_frames_are_reused(self):
+        self.render()
+        self.render()
+        self.assertEqual(self.renderer.call_count, 1)
+
+    def test_layout_camera_and_caption_changes_invalidate_cache(self):
+        self.render()
+        self.context.cache_signature = 'layout-v2'
+        self.render()
+        Image.new('RGB', (17, 17), 'green').save(self.camera)
+        self.render()
+        self.context.steps[0].events = [('Alice', 'Meet here.')]
+        self.render()
+        self.assertEqual(self.renderer.call_count, 4)
+
+    def test_missing_or_corrupted_outputs_are_regenerated(self):
+        filename = Path(self.render()[0][0])
+        filename.unlink()
+        self.render()
+        filename.with_suffix('.json').write_text('invalid json')
+        self.render()
+        filename.write_bytes(b'incomplete image')
+        self.render()
+        self.assertEqual(self.renderer.call_count, 4)
+
+    def test_overwrite_forces_render(self):
+        self.render()
+        self.context.overwrite = True
+        self.render()
+        self.assertEqual(self.renderer.call_count, 2)
+
+    def test_failed_image_save_preserves_existing_output(self):
+        filename = Path(self.render()[0][0])
+        previous = filename.read_bytes()
+        with patch.object(Image.Image, 'save', side_effect=OSError('out of space')):
+            with self.assertRaises(OSError):
+                save_frame(Image.new('RGB', (16, 16)), filename, 'new-key')
+        self.assertEqual(filename.read_bytes(), previous)
+        self.assertEqual(sorted(p.name for p in self.root.glob('*.png')), [filename.name])
 
 
 if __name__ == '__main__':
