@@ -90,6 +90,45 @@ These capabilities are inherently dual-use. In particular, the following applica
 We ask users to apply Sentinel only for lawful, authorized, and ethically reviewed purposes, with safeguards appropriate to their deployment context. Concerns about misuse, documentation, or other responsible-use issues can be reported through the repository's [issue tracker](https://github.com/UMass-Embodied-AGI/Sentinel/issues). We will maintain this guidance through versioned updates as the benchmark and its uses evolve.
 
 
+The standard runners share their launch settings in `sentinel_challenge/run_experiment.sh`. Existing script names and positional arguments are preserved. Invoke them from any directory using an absolute script path; relative checkpoint and output paths are resolved from the repository root, and existing `PYTHONPATH` entries are preserved. RL and MAT accept an optional sixth positional argument for a checkpoint. The Qwen runners retain their separate server lifecycle.
+
+Check runner arguments and shell syntax without launching the simulator:
+
+```bash
+python -m unittest discover -s tests -p 'test_experiment_runners.py'
+```
+
+
+## Generate a Replay Video
+
+Replay rendering uses saved episode records and camera images; it requires CPU resources, not a GPU. On Unity, run rendering inside a Slurm allocation. From the activated environment:
+
+```bash
+python tools/make_video_demo.py \
+  --data_dir /path/to/AUSTIN/sentinel_gt_5/patrol_5/job_1 \
+  --scene AUSTIN \
+  --scene_assets_dir /path/to/private/scenes/AUSTIN \
+  --demo_dir output/austin_replay \
+  --cam_type ego --videowriter ffmpeg --threads 4
+```
+
+`--scene_assets_dir` must contain `global.png` and `global_cam_parameters.json`; it defaults to this repository's `assets/scenes/<SCENE>/`. This allows rendering unpublished scenes without copying their assets into the release. `--demo_dir` receives frames and `demo.mp4`; by default these go under the episode's `demo/district_ego_full/`. Frames are reused only when their cache metadata matches the render settings, layout code, map, captions, positions, and camera files. Camera files are checked by path, size, and modification time. Old outputs without cache metadata are regenerated. Use `--overwrite` to force a render, including after input changes that preserve file size and timestamps.
+
+`--scene` overrides inference from benchmark and legacy episode paths, including names such as `EL_PASO`. Add `--steps 10` for a short preview or `--no_output_video` for frames only. The FFmpeg writer uses `ffmpeg` from `PATH`, falling back to the binary bundled with `imageio-ffmpeg`. Both writers honor `--codec` and `--threads`, and round each shot duration to at least one frame at 24 fps. Timed PNG entries avoid repeatedly decoding the same image during dialogue pauses. Encoders write to a temporary directory beside the destination and replace `demo.mp4` only after successful completion; a failed encode preserves the previous video. Encoder availability is checked before episode loading, while `--no_output_video` requires no encoder.
+
+Run the lightweight replay regression checks with:
+
+```bash
+python -m unittest discover -s tests -p 'test_video_demo.py'
+```
+
+Inside a CPU allocation, also exercise both codecs and writers with real encoding and decoding:
+
+```bash
+RUN_VIDEO_ENCODING_TESTS=1 python -m unittest discover -s tests -p 'test_video*.py'
+```
+
+
 ## Citation
 
 If you find our work useful, please consider citing:
