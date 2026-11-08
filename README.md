@@ -90,6 +90,15 @@ These capabilities are inherently dual-use. In particular, the following applica
 We ask users to apply Sentinel only for lawful, authorized, and ethically reviewed purposes, with safeguards appropriate to their deployment context. Concerns about misuse, documentation, or other responsible-use issues can be reported through the repository's [issue tracker](https://github.com/UMass-Embodied-AGI/Sentinel/issues). We will maintain this guidance through versioned updates as the benchmark and its uses evolve.
 
 
+The standard runners share their launch settings in `sentinel_challenge/run_experiment.sh`. Existing script names and positional arguments are preserved. Invoke them from any directory using an absolute script path; relative checkpoint and output paths are resolved from the repository root, and existing `PYTHONPATH` entries are preserved. RL and MAT accept an optional sixth positional argument for a checkpoint. The Qwen runners retain their separate server lifecycle.
+
+Check runner arguments and shell syntax without launching the simulator:
+
+```bash
+python -m unittest discover -s tests -p 'test_experiment_runners.py'
+```
+
+
 ## Generate a Replay Video
 
 Replay rendering uses saved episode records and camera images; it requires CPU resources, not a GPU. On Unity, run rendering inside a Slurm allocation. From the activated environment:
