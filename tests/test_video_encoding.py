@@ -53,7 +53,7 @@ class VideoEncodingTests(unittest.TestCase):
                         self.assertEqual(len(frames), sum(counts))
                         actual = frames.mean(axis=(1, 2))
                         np.testing.assert_allclose(actual, expected, atol=15)
-            self.assertEqual(list(root.glob('*.ffconcat')), [])
+            self.assertEqual([p for p in root.iterdir() if p.is_dir()], [])
 
 
 if __name__ == '__main__':

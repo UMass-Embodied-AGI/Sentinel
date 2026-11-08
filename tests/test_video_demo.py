@@ -4,14 +4,16 @@ import json
 from pathlib import Path
 import tempfile
 import subprocess
+from types import SimpleNamespace
 
 from PIL import Image
 import unittest
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from tools.make_video_demo import (
     EpisodeStep, RenderContext, build_parser, frame_counts, images_to_video_using_ffmpeg,
     infer_scene, main, process_frame, read_step, resolve_paths, save_frame, timeline,
+    validate_video_writer, write_video,
 )
 
 
@@ -94,7 +96,80 @@ class EncodingValidationTests(unittest.TestCase):
                     patch('tools.make_video_demo.subprocess.run', side_effect=subprocess.CalledProcessError(1, 'ffmpeg')):
                 with self.assertRaises(subprocess.CalledProcessError):
                     images_to_video_using_ffmpeg([('frame.png', 0.1)], root/'demo.mp4')
-            self.assertEqual(list(root.glob('*.ffconcat')), [])
+            self.assertEqual(list(root.iterdir()), [])
+
+
+class VideoOutputTests(unittest.TestCase):
+    def test_failed_encode_preserves_previous_video_for_both_writers(self):
+        for writer in ['ffmpeg', 'default']:
+            with self.subTest(writer=writer), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                output = root / 'demo.mp4'
+                output.write_bytes(b'previous video')
+
+                def fail(target, **kwargs):
+                    Path(target).write_bytes(b'incomplete encode')
+                    raise RuntimeError('encoder failed')
+
+                video_clip = MagicMock()
+                video_clip.return_value.__enter__.return_value.write_videofile.side_effect = fail
+                args = SimpleNamespace(videowriter=writer, codec='h264', threads=1)
+                with patch.dict('sys.modules', {'moviepy': SimpleNamespace(VideoClip=video_clip)}), \
+                        patch('tools.make_video_demo.find_ffmpeg', return_value='ffmpeg'), \
+                        patch('tools.make_video_demo.subprocess.run', side_effect=lambda command, **kw: fail(command[-1])):
+                    with self.assertRaisesRegex(RuntimeError, 'encoder failed'):
+                        write_video([('frame.png', 0.1)], output, args)
+                self.assertEqual(output.read_bytes(), b'previous video')
+                self.assertEqual(list(root.iterdir()), [output])
+
+    def test_successful_encode_replaces_video_for_both_writers(self):
+        for writer in ['ffmpeg', 'default']:
+            with self.subTest(writer=writer), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                output = root / 'demo.mp4'
+                output.write_bytes(b'previous video')
+
+                def succeed(target, **kwargs):
+                    # The previous video must remain available throughout encoding.
+                    self.assertEqual(output.read_bytes(), b'previous video')
+                    Path(target).write_bytes(b'complete new video')
+
+                video_clip = MagicMock()
+                video_clip.return_value.__enter__.return_value.write_videofile.side_effect = succeed
+                args = SimpleNamespace(videowriter=writer, codec='h264', threads=1)
+                with patch.dict('sys.modules', {'moviepy': SimpleNamespace(VideoClip=video_clip)}), \
+                        patch('tools.make_video_demo.find_ffmpeg', return_value='ffmpeg'), \
+                        patch('tools.make_video_demo.subprocess.run', side_effect=lambda command, **kw: succeed(command[-1])):
+                    write_video([('frame.png', 0.1)], output, args)
+                self.assertEqual(output.read_bytes(), b'complete new video')
+                self.assertEqual(list(root.iterdir()), [output])
+
+    def test_empty_encoder_output_does_not_replace_video(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / 'demo.mp4'
+            output.write_bytes(b'previous video')
+            with patch('tools.make_video_demo.find_ffmpeg', return_value='ffmpeg'), \
+                    patch('tools.make_video_demo.subprocess.run'):
+                with self.assertRaisesRegex(RuntimeError, 'did not produce a video'):
+                    images_to_video_using_ffmpeg([('frame.png', 0.1)], output)
+            self.assertEqual(output.read_bytes(), b'previous video')
+            self.assertEqual(list(Path(directory).iterdir()), [output])
+
+    def test_unavailable_encoder_fails_before_loading_episode(self):
+        with patch('tools.make_video_demo.find_ffmpeg', side_effect=RuntimeError('FFmpeg unavailable')), \
+                patch('tools.make_video_demo.load_context') as load, \
+                patch('sys.stderr', new_callable=io.StringIO) as errors:
+            with self.assertRaises(SystemExit) as error:
+                main(['--videowriter', 'ffmpeg'])
+            self.assertEqual(error.exception.code, 2)
+            self.assertIn('FFmpeg unavailable', errors.getvalue())
+            load.assert_not_called()
+
+    def test_frames_only_mode_does_not_require_encoder(self):
+        args = SimpleNamespace(no_output_video=True, videowriter='ffmpeg')
+        with patch('tools.make_video_demo.find_ffmpeg') as find:
+            validate_video_writer(args)
+        find.assert_not_called()
 
 
 class FrameCacheTests(unittest.TestCase):

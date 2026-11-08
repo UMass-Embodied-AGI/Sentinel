@@ -1,6 +1,7 @@
 import argparse
 from bisect import bisect_right
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
 from dataclasses import dataclass
 from functools import lru_cache, partial
 from itertools import accumulate
@@ -83,32 +84,40 @@ def concat_path(path):
     return "'" + value.replace("'", "'\\''") + "'"
 
 
+@contextmanager
+def atomic_video_output(output_path):
+    """Replace the destination only after a complete encode on the same filesystem."""
+    output_path = Path(output_path)
+    with tempfile.TemporaryDirectory(dir=output_path.parent, prefix=f'.{output_path.stem}-') as directory:
+        temporary = Path(directory) / output_path.name
+        yield temporary
+        if not temporary.is_file() or temporary.stat().st_size == 0:
+            raise RuntimeError(f'Encoder did not produce a video: {output_path}')
+        temporary.replace(output_path)
+
+
 def images_to_video_using_ffmpeg(frame_durations, output_path, threads=8, codec='mpeg4'):
-    """Encode timed stills with explicit timestamps, without repeatedly decoding each PNG."""
+    """Encode timed stills without repeatedly decoding PNGs or damaging previous videos."""
     counts = frame_counts(frame_durations)
     encoder, options = encoder_settings(codec)
     executable = find_ffmpeg()
-    output_path = Path(output_path)
-    # Validate paths before creating the manifest so invalid input cannot leak temporary files.
     paths = [concat_path(path) for path, _ in frame_durations]
-    with tempfile.NamedTemporaryFile(mode='w', dir=output_path.parent,
-                                     suffix='.ffconcat', delete=False) as stream:
-        manifest = Path(stream.name)
-        stream.write('ffconcat version 1.0\n')
-        for path, count in zip(paths, counts):
-            stream.write(f'file {path}\noption framerate {VIDEO_FPS}\nduration {count/VIDEO_FPS:.12f}\n')
-        # The final repeated image establishes the endpoint for the preceding duration.
-        stream.write(f'file {paths[-1]}\noption framerate {VIDEO_FPS}\n')
-    command = [executable, '-y', '-f', 'concat', '-safe', '0', '-i', str(manifest),
-               '-vf', f'fps={VIDEO_FPS}', '-fps_mode', 'passthrough', '-frames:v', str(sum(counts)),
-               '-vcodec', encoder, '-threads', str(threads)]
-    if codec == 'h264':
-        command += ['-preset', 'slow']
-    command += options + [str(output_path)]
-    try:
+    with atomic_video_output(output_path) as temporary:
+        # The manifest shares the temporary output directory and is cleaned up on any failure.
+        manifest = temporary.parent / 'frames.ffconcat'
+        with manifest.open('w') as stream:
+            stream.write('ffconcat version 1.0\n')
+            for path, count in zip(paths, counts):
+                stream.write(f'file {path}\noption framerate {VIDEO_FPS}\nduration {count/VIDEO_FPS:.12f}\n')
+            # Repeating the final image establishes the preceding duration's endpoint.
+            stream.write(f'file {paths[-1]}\noption framerate {VIDEO_FPS}\n')
+        command = [executable, '-y', '-f', 'concat', '-safe', '0', '-i', str(manifest),
+                   '-vf', f'fps={VIDEO_FPS}', '-fps_mode', 'passthrough', '-frames:v', str(sum(counts)),
+                   '-vcodec', encoder, '-threads', str(threads)]
+        if codec == 'h264':
+            command += ['-preset', 'slow']
+        command += options + [str(temporary)]
         subprocess.run(command, check=True)
-    finally:
-        manifest.unlink(missing_ok=True)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -330,6 +339,16 @@ def load_context(args):
                          agents, sentinels, colors, tile, extent, steps, signature)
 
 
+def validate_video_writer(args):
+    """Detect missing encoder dependencies before reading or rendering an episode."""
+    if args.no_output_video:
+        return
+    if args.videowriter == 'ffmpeg':
+        find_ffmpeg()
+    else:
+        from moviepy import VideoClip
+
+
 def write_video(shots, output, args):
     if args.videowriter == 'ffmpeg':
         images_to_video_using_ffmpeg(shots, str(output), threads=args.threads, codec=args.codec)
@@ -344,10 +363,11 @@ def write_video(shots, output, args):
         with Image.open(shots[index][0]) as image:
             return np.array(image)
 
-    with VideoClip(lambda t: load(min(bisect_right(ends, round(t * VIDEO_FPS, 8)), len(ends)-1)),
-                   duration=ends[-1]/VIDEO_FPS) as clip:
-        clip.write_videofile(str(output), fps=VIDEO_FPS, codec=encoder, threads=args.threads,
-                             preset='slow', ffmpeg_params=options)
+    with atomic_video_output(output) as temporary:
+        with VideoClip(lambda t: load(min(bisect_right(ends, round(t * VIDEO_FPS, 8)), len(ends)-1)),
+                       duration=ends[-1]/VIDEO_FPS) as clip:
+            clip.write_videofile(str(temporary), fps=VIDEO_FPS, codec=encoder, threads=args.threads,
+                                 preset='slow', ffmpeg_params=options)
 
 
 def main(argv=None):
@@ -356,8 +376,9 @@ def main(argv=None):
     if args.threads < 1 or args.fps < 1 or (args.steps is not None and args.steps < 1):
         parser.error('--threads, --fps, and --steps must be positive.')
     try:
+        validate_video_writer(args)
         context = load_context(args)
-    except (ValueError, FileNotFoundError) as error:
+    except (ValueError, FileNotFoundError, ImportError, RuntimeError) as error:
         parser.error(str(error))
     renderer = partial(process_frame, context=context)
     with ThreadPoolExecutor(max_workers=args.threads) as executor:
